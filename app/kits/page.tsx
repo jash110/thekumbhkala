@@ -1,0 +1,162 @@
+import Link from "next/link";
+import FadeIn from "../components/FadeIn";
+import PlaceholderImage from "../components/PlaceholderImage";
+import PriceTag from "../components/PriceTag";
+import ToteShowcase from "../components/ToteShowcase";
+import Bilingual from "../components/Bilingual";
+import { kits } from "../lib/data";
+
+export const metadata = {
+  title: "Kits — Kumbhkala",
+};
+
+export default function KitsPage() {
+  return (
+    <div>
+      <FadeIn>
+        <div style={{ position: "relative", width: "100%", height: "clamp(260px, 36vw, 520px)" }}>
+          <PlaceholderImage
+            label="[Photo: both hampers staged together on ghat steps]"
+            fill
+            rounded={false}
+          />
+        </div>
+      </FadeIn>
+
+      <div className="kits-intro">
+        <FadeIn delay={0.1}>
+          <Bilingual
+            as="h1"
+            en="Kumbh Yatra Experience Kits"
+            hi="कुंभ यात्रा अनुभव किट"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.6rem)" }}
+          />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <p style={{ fontSize: "clamp(1.05rem, 1.3vw, 1.2rem)", lineHeight: 1.75, color: "var(--color-muted)", maxWidth: "64ch" }}>
+            Experience the essence of the Kumbh Mela from home — sacred
+            elements, local flavors, and a keepsake to carry the memory
+            forward. Each kit is assembled with intention, inspired by the
+            journey of the Yatra itself.
+          </p>
+        </FadeIn>
+      </div>
+
+      <div className="kits-grid-wrap">
+        <div className="kits-grid">
+          {kits.map((kit, i) => {
+            const isTrimbak = kit.slug === "trimbak";
+            return (
+              <FadeIn key={kit.slug} delay={0.1 * i}>
+                <div
+                  style={{
+                    border: isTrimbak ? "1.5px solid var(--color-pink-soft)" : "1px solid var(--color-border)",
+                    borderRadius: "20px",
+                    padding: "2rem",
+                    background: isTrimbak
+                      ? "linear-gradient(165deg, var(--color-pink) 0%, var(--color-pink-deep) 100%)"
+                      : "#faf5e9",
+                    color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)",
+                    height: "100%",
+                  }}
+                >
+                  <PlaceholderImage
+                    label={`[Photo: ${kit.name} packaging]`}
+                    aspectRatio="4 / 3"
+                    tone={isTrimbak ? "maroon" : "cream"}
+                  />
+                  <h2 style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}>
+                    {kit.name}
+                  </h2>
+                  <div style={{ marginBottom: "0.75rem" }}>
+                    <PriceTag mrp={kit.mrp} price={kit.price} size="lg" accent={isTrimbak ? "cream" : "marigold"} />
+                  </div>
+                  <p style={{ fontSize: "clamp(1.05rem, 1.2vw, 1.15rem)", lineHeight: 1.6, color: isTrimbak ? "rgba(240,232,220,0.75)" : "var(--color-muted)" }}>
+                    {kit.description}
+                  </p>
+
+                  <div
+                    style={{
+                      marginTop: "1.25rem",
+                      paddingTop: "1.25rem",
+                      borderTop: isTrimbak ? "1px solid rgba(240,232,220,0.2)" : "1px solid var(--color-border)",
+                    }}
+                  >
+                    <span className="label" style={{ color: isTrimbak ? "var(--color-pink-soft)" : "var(--color-marigold)" }}>
+                      What&apos;s Inside
+                    </span>
+                    <ul style={{ display: "grid", gap: "0.6rem", margin: "1rem 0" }}>
+                      {kit.whatsInside.map((item) => {
+                        const isPlaceholder = item.includes("TBD");
+                        return (
+                          <li
+                            key={item}
+                            style={{
+                              fontSize: "1rem",
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "0.6rem",
+                              fontStyle: isPlaceholder ? "italic" : "normal",
+                              color: isPlaceholder
+                                ? isTrimbak
+                                  ? "var(--color-pink-soft)"
+                                  : "var(--color-gold)"
+                                : isTrimbak
+                                ? "var(--color-cream)"
+                                : "var(--color-ink)",
+                            }}
+                          >
+                            <span
+                              style={{
+                                width: "6px",
+                                height: "6px",
+                                borderRadius: "50%",
+                                background: isTrimbak ? "var(--color-pink-soft)" : "var(--color-marigold)",
+                                flexShrink: 0,
+                              }}
+                            />
+                            {item}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+
+                  <Link href={`/kits/${kit.slug}`} className={isTrimbak ? "btn btn-marigold" : "btn btn-outline"}>
+                    View Kit
+                  </Link>
+                </div>
+              </FadeIn>
+            );
+          })}
+        </div>
+      </div>
+
+      <ToteShowcase />
+
+      <style>{`
+        .kits-intro {
+          padding-inline: var(--page-gutter);
+          padding-block: clamp(40px, 5vw, 64px) clamp(24px, 3vw, 40px);
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        .kits-grid-wrap {
+          padding-inline: var(--page-gutter);
+          padding-block: 0 clamp(48px, 6vw, 80px);
+        }
+        .kits-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        @media (min-width: 768px) {
+          .kits-intro { grid-template-columns: 1fr 1fr; gap: clamp(32px, 4vw, 64px); align-items: start; }
+          .kits-grid { grid-template-columns: 1fr 1fr; }
+        }
+      `}</style>
+    </div>
+  );
+}
