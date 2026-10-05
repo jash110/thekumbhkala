@@ -1,5 +1,4 @@
 import FadeIn from "../components/FadeIn";
-import PlaceholderImage from "../components/PlaceholderImage";
 import HomeImageSlot from "../components/HomeImageSlot";
 import Bilingual from "../components/Bilingual";
 import { SHLOKA_LINE_1, SHLOKA_LINE_2, SHLOKA_CITATION, ABOUT_SUBHEADING, ABOUT_PARAGRAPHS } from "../lib/copy";
@@ -7,12 +6,6 @@ import { SHLOKA_LINE_1, SHLOKA_LINE_2, SHLOKA_CITATION, ABOUT_SUBHEADING, ABOUT_
 export const metadata = {
   title: "About — Kumbhkala",
 };
-
-const team = [
-  { name: "[Name]", role: "[Role in one line]" },
-  { name: "[Name]", role: "[Role in one line]" },
-  { name: "[Name]", role: "[Role in one line]" },
-];
 
 export default function AboutPage() {
   return (
@@ -75,7 +68,7 @@ export default function AboutPage() {
         <FadeIn delay={0.15} className="about-image-fade">
           <div className="about-image-col">
             <div className="about-image-slot">
-              <HomeImageSlot slot="aboutOne" fill rounded={false} />
+              <HomeImageSlot slot="aboutOne" fill rounded={false} priority />
             </div>
             <div className="about-image-slot">
               <HomeImageSlot slot="aboutTwo" fill rounded={false} />
@@ -83,27 +76,6 @@ export default function AboutPage() {
           </div>
         </FadeIn>
       </div>
-
-      <section className="section team-section">
-        <FadeIn>
-          <Bilingual as="h2" en="Meet the Team" hi="हमारी टीम" style={{ textAlign: "center", marginBottom: "2.5rem" }} />
-        </FadeIn>
-        <div className="team-grid">
-          {team.map((member, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
-              <div style={{ textAlign: "center" }}>
-                <PlaceholderImage label="[Photo: Team member]" aspectRatio="1 / 1" className="team-circle" />
-                <p style={{ marginTop: "1.1rem", fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2vw, 1.9rem)", fontWeight: 600 }}>
-                  {member.name}
-                </p>
-                <p style={{ marginTop: "0.3rem", fontSize: "1.1rem", color: "var(--color-muted)" }}>
-                  {member.role}
-                </p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </section>
 
       <style>{`
         .about-split {
@@ -130,6 +102,9 @@ export default function AboutPage() {
             gap: clamp(16px, 2vw, 32px);
             align-items: stretch;
           }
+          .about-text-col {
+            padding-bottom: clamp(40px, 5vw, 80px);
+          }
           .about-image-fade {
             height: 100%;
           }
@@ -141,24 +116,6 @@ export default function AboutPage() {
             flex: 1;
             min-height: 320px;
           }
-        }
-
-        .team-section {
-          padding-block: var(--section-space, clamp(56px, 7vw, 104px));
-          padding-inline: var(--page-gutter);
-        }
-        .team-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: clamp(24px, 4vw, 64px);
-        }
-        @media (min-width: 700px) {
-          .team-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        .team-circle {
-          width: clamp(200px, 22vw, 380px) !important;
-          margin: 0 auto;
-          border-radius: 50% !important;
         }
       `}</style>
     </div>

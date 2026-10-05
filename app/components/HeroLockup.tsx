@@ -54,6 +54,8 @@ export default function HeroLockup() {
           line-height: 1;
           white-space: nowrap;
         }
+        /* 768–899px: the hero is still stacked (full-width text), so the
+           original viewport-based sizes are fine. */
         @media (min-width: 768px) {
           .hero-lockup-mark {
             width: clamp(112px, 11vw, 176px);
@@ -61,6 +63,24 @@ export default function HeroLockup() {
           }
           .hero-lockup-wordmark {
             font-size: clamp(3rem, 5.2vw, 4.8rem);
+          }
+        }
+        /* From 900px the hero is side-by-side and the text column is 42% wide
+           (SplitSection default) minus its horizontal page-gutter padding. Size
+           the mark and wordmark from that width so "Kumbhkala" always fits
+           beside the image. 41vw (not 42) leaves room for the scrollbar. The
+           wordmark is ~5.3em wide. */
+        @media (min-width: 900px) {
+          .hero-lockup {
+            --avail: calc(41vw - 2 * clamp(20px, 5vw, 88px));
+            --mark: clamp(64px, calc(var(--avail) * 0.3), 176px);
+          }
+          .hero-lockup-mark {
+            width: var(--mark);
+            height: var(--mark);
+          }
+          .hero-lockup-wordmark {
+            font-size: min(4.8rem, calc((var(--avail) - var(--mark) - 20px) / 5.4));
           }
         }
       `}</style>

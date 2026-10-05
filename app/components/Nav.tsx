@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import SearchDropdown from "./SearchDropdown";
 import CartDrawer from "./CartDrawer";
+import { useCart } from "./CartContext";
 import { useNavBrandVisibility } from "./NavBrandVisibility";
 
 const NAV_LINKS = [
@@ -26,7 +27,7 @@ export default function Nav() {
   const [isMobile, setIsMobile] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
+  const { cartCount, drawerOpen, openDrawer, closeDrawer } = useCart();
   const [settled, setSettled] = useState(false);
 
   useEffect(() => {
@@ -205,39 +206,42 @@ export default function Nav() {
 
           <button
             aria-label="Cart"
-            onClick={() => setCartOpen(true)}
+            onClick={openDrawer}
             style={{ background: "none", border: "none", position: "relative" }}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M6 8h12l-1 11.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 19.5L6 8Z" stroke="var(--color-ink)" strokeWidth="1.5" strokeLinejoin="round" />
               <path d="M9 8V6.5a3 3 0 0 1 6 0V8" stroke="var(--color-ink)" strokeWidth="1.5" />
             </svg>
-            <span
-              style={{
-                position: "absolute",
-                top: "-6px",
-                right: "-8px",
-                background: "var(--color-marigold)",
-                color: "var(--color-cream)",
-                fontSize: "0.62rem",
-                fontWeight: 600,
-                width: "16px",
-                height: "16px",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              1
-            </span>
+            {cartCount > 0 && (
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-6px",
+                  right: "-8px",
+                  background: "var(--color-marigold)",
+                  color: "var(--color-cream)",
+                  fontSize: "0.62rem",
+                  fontWeight: 600,
+                  minWidth: "16px",
+                  height: "16px",
+                  padding: "0 3px",
+                  borderRadius: "999px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {cartCount}
+              </span>
+            )}
           </button>
         </div>
 
         <SearchDropdown open={searchOpen} onClose={() => setSearchOpen(false)} />
       </motion.header>
 
-      <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
+      <CartDrawer open={drawerOpen} onClose={closeDrawer} />
 
       <AnimatePresence>
         {mobileMenuOpen && (

@@ -13,7 +13,7 @@ export default function Hero() {
       className="hero-split"
       image={
         <div style={{ position: "relative", width: "100%", height: "100%" }}>
-          <HomeImageSlot slot="hero" fill rounded={false} />
+          <HomeImageSlot slot="hero" fill rounded={false} priority />
         </div>
       }
     >

@@ -9,6 +9,7 @@ interface HomeImageSlotProps {
   tone?: "cream" | "maroon";
   className?: string;
   objectPosition?: string;
+  priority?: boolean;
 }
 
 export default function HomeImageSlot({
@@ -18,6 +19,7 @@ export default function HomeImageSlot({
   tone = "cream",
   className = "",
   objectPosition,
+  priority = false,
 }: HomeImageSlotProps) {
   const data = homeImages[slot];
 
@@ -37,6 +39,7 @@ export default function HomeImageSlot({
           src={data.src}
           alt={data.label.replace(/^\[Photo:\s*/, "").replace(/\]$/, "")}
           fill
+          priority={priority}
           sizes={data.sizes ?? "(min-width: 900px) 50vw, 100vw"}
           style={{ objectFit: "cover", objectPosition: objectPosition ?? data.objectPosition ?? "center" }}
         />

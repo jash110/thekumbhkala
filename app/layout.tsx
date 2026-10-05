@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Yatra_One, Noto_Serif_Devanagari } from "next/
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { NavBrandProvider } from "./components/NavBrandVisibility";
+import { CartProvider } from "./components/CartContext";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -47,9 +48,11 @@ export default function RootLayout({
         className={`${playfairDisplay.variable} ${inter.variable} ${yatraOne.variable} ${notoSerifDevanagari.variable}`}
       >
         <NavBrandProvider>
-          <Nav />
-          {children}
-          <Footer />
+          <CartProvider>
+            <Nav />
+            {children}
+            <Footer />
+          </CartProvider>
         </NavBrandProvider>
       </body>
     </html>

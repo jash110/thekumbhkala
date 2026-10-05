@@ -3,10 +3,12 @@
 import { useState } from "react";
 import PriceTag from "./PriceTag";
 import QuantityStepper from "./QuantityStepper";
+import { useCart } from "./CartContext";
 import type { Kit } from "../lib/data";
 
 export default function KitPurchasePanel({ kit }: { kit: Kit }) {
   const [quantity, setQuantity] = useState(1);
+  const { addItem, openDrawer } = useCart();
   const isTrimbak = kit.slug === "trimbak";
 
   return (
@@ -21,7 +23,15 @@ export default function KitPurchasePanel({ kit }: { kit: Kit }) {
 
       <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
         <QuantityStepper quantity={quantity} onChange={setQuantity} size="lg" />
-        <button type="button" className="btn btn-marigold" style={{ padding: "1.05rem 2.4rem", fontSize: "1.05rem" }}>
+        <button
+          type="button"
+          className="btn btn-marigold"
+          style={{ padding: "1.05rem 2.4rem", fontSize: "1.05rem" }}
+          onClick={() => {
+            addItem(kit.slug, quantity);
+            openDrawer();
+          }}
+        >
           Pre-Order {kit.name}
         </button>
       </div>

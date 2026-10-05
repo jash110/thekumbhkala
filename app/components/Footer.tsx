@@ -30,7 +30,7 @@ export default function Footer() {
           </p>
           <div style={{ marginTop: "1.5rem", fontSize: "0.95rem", lineHeight: 1.9 }}>
             <p style={{ color: "rgba(240,232,220,0.8)" }}>info@kumbhkala.com</p>
-            <p style={{ color: "rgba(240,232,220,0.8)" }}>+91 [PHONE]</p>
+            <p style={{ color: "rgba(240,232,220,0.8)" }}>+91 90227 43147</p>
           </div>
         </div>
 
