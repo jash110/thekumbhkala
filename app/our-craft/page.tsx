@@ -1,7 +1,9 @@
 import FadeIn from "../components/FadeIn";
-import PlaceholderImage from "../components/PlaceholderImage";
+import CollaborationCarousel from "../components/CollaborationCarousel";
 import AlternatingFeature from "../components/AlternatingFeature";
 import Bilingual from "../components/Bilingual";
+import ElementGrid from "../components/ElementGrid";
+import { elements } from "../lib/data";
 
 export const metadata = {
   title: "Our Craft — Kumbhkala",
@@ -10,29 +12,28 @@ export const metadata = {
 export default function OurCraftPage() {
   return (
     <div>
-      <div style={{ padding: "2rem var(--page-gutter) 0" }}>
-        <FadeIn>
-          <span className="label">How Kumbhkala Is Made</span>
-        </FadeIn>
-        <FadeIn delay={0.1}>
-          <Bilingual
-            as="h1"
-            en="Our Craft"
-            hi="हमारी कारीगरी"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.6rem)", margin: "1rem 0 2.5rem" }}
-          />
-        </FadeIn>
-      </div>
-
-      <section style={{ paddingBlock: "0 clamp(48px, 6vw, 80px)" }}>
-        <div style={{ paddingInline: "var(--page-gutter)" }}>
+      <div className="craft-top">
+        <div>
+          <FadeIn>
+            <span className="label">How Kumbhkala Is Made</span>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <Bilingual
+              as="h1"
+              en="Our Craft"
+              hi="हमारी कारीगरी"
+              style={{ fontSize: "clamp(2rem, 4vw, 3.6rem)", margin: "1rem 0 0" }}
+            />
+          </FadeIn>
+        </div>
+        <div>
           <FadeIn>
             <h2 style={{ marginBottom: "1.25rem" }}>
               What Authenticity Means to Us
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p style={{ fontSize: "clamp(1.05rem, 1.3vw, 1.2rem)", lineHeight: 1.75, color: "var(--color-muted)", maxWidth: "64ch", marginBottom: "2.5rem" }}>
+            <p style={{ fontSize: "clamp(1.05rem, 1.3vw, 1.2rem)", lineHeight: 1.75, color: "var(--color-muted)", maxWidth: "64ch" }}>
               Every element in a Kumbhkala kit is sourced with intention, not
               convenience. We work directly with vendors, temple trusts, and
               printers in and around Nashik so that what reaches you is what
@@ -41,15 +42,20 @@ export default function OurCraftPage() {
             </p>
           </FadeIn>
         </div>
-
-        <div className="authenticity-row">
-          {["ritual object close-up 1", "ritual object close-up 2", "ritual object close-up 3"].map((label, i) => (
-            <FadeIn key={label} delay={i * 0.1}>
-              <PlaceholderImage label={`[Photo: ${label}]`} aspectRatio="1 / 1" rounded={false} />
-            </FadeIn>
-          ))}
+        <div>
+          <FadeIn>
+            <Bilingual as="h2" en="Our First Collaboration" hi="हमारी कहानियाँ" hiSize="max(1.2rem, calc(0.62 * clamp(2rem, 4vw, 3.6rem)))" style={{ marginBottom: "1.25rem" }} />
+            <p style={{ color: "var(--color-muted)", fontStyle: "italic" }}>
+              [COLLABORATION STORY TEXT — TBD, to be added later]
+            </p>
+          </FadeIn>
         </div>
-      </section>
+        <FadeIn delay={0.1} className="collab-media">
+          <CollaborationCarousel fill />
+        </FadeIn>
+      </div>
+
+      <ElementGrid elements={elements} />
 
       <section
         style={{
@@ -91,13 +97,22 @@ export default function OurCraftPage() {
       />
 
       <style>{`
-        .authenticity-row {
+        .craft-top {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 0;
+          gap: 2rem;
+          padding: 2rem var(--page-gutter) clamp(24px, 3vw, 48px);
+        }
+        .collab-media {
+          position: relative;
+          aspect-ratio: 3 / 2;
         }
         @media (min-width: 768px) {
-          .authenticity-row { grid-template-columns: repeat(3, 1fr); }
+          .craft-top {
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(2rem, 4vw, 4rem);
+            align-items: start;
+          }
         }
       `}</style>
     </div>

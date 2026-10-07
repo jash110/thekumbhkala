@@ -8,9 +8,11 @@ interface BilingualProps {
   className?: string;
   /** Override the Hindi text colour — use on a pink surface, where the default pink would be unreadable. */
   hiColor?: string;
+  /** Override the Hindi font size (default scales with the heading). */
+  hiSize?: string;
 }
 
-export default function Bilingual({ en, hi, as, style, className, hiColor = "var(--color-pink)" }: BilingualProps) {
+export default function Bilingual({ en, hi, as, style, className, hiColor = "var(--color-pink)", hiSize = "max(1.2rem, 0.62em)" }: BilingualProps) {
   if (as === "label") {
     return (
       <span className={className ? `label ${className}` : "label"} style={style}>
@@ -42,7 +44,7 @@ export default function Bilingual({ en, hi, as, style, className, hiColor = "var
           fontFamily: "var(--font-hindi)",
           fontWeight: 600,
           color: hiColor,
-          fontSize: "max(1.2rem, 0.62em)",
+          fontSize: hiSize,
           lineHeight: 1.35,
           marginTop: "0.5rem",
         }}

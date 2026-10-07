@@ -1,5 +1,5 @@
 import FadeIn from "./FadeIn";
-import PlaceholderImage from "./PlaceholderImage";
+import ElementMedia from "./ElementMedia";
 import Bilingual from "./Bilingual";
 import type { KumbhElement } from "../lib/data";
 
@@ -27,12 +27,7 @@ export default function ElementGrid({ elements }: { elements: KumbhElement[] }) 
           <FadeIn key={el.name} delay={i * 0.05}>
             <div className="element-card">
               <div className="element-card-media">
-                <PlaceholderImage
-                  label={`[Photo: ${el.name}]`}
-                  mediaType={el.mediaType ?? "image"}
-                  fill
-                  rounded={false}
-                />
+                <ElementMedia {...el} />
               </div>
               <div className="element-card-body">
                 <h3 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 1.8vw, 2rem)", fontWeight: 600 }}>
@@ -76,6 +71,7 @@ export default function ElementGrid({ elements }: { elements: KumbhElement[] }) 
         .element-card-media {
           position: relative;
           width: 100%;
+          overflow: hidden;
           aspect-ratio: ${ELEMENT_VIDEO_ASPECT};
         }
         .element-card-body {

@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import PlaceholderImage from "./PlaceholderImage";
 import { kits } from "../lib/data";
@@ -13,8 +13,16 @@ interface SearchDropdownProps {
 }
 
 export default function SearchDropdown({ open, onClose }: SearchDropdownProps) {
-  const [query, setQuery] = useState("");
   const panelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleKey(event: KeyboardEvent) {
+      if (event.key === "Escape") onClose();
+    }
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [open, onClose]);
 
   useEffect(() => {
     if (!open) return;
@@ -49,21 +57,8 @@ export default function SearchDropdown({ open, onClose }: SearchDropdownProps) {
             zIndex: 200,
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <input
-              autoFocus
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search kits, rituals, elements..."
-              style={{
-                flex: 1,
-                border: "1px solid var(--color-border)",
-                borderRadius: "999px",
-                padding: "0.6rem 1rem",
-                fontSize: "0.95rem",
-                background: "#fff",
-              }}
-            />
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <span className="label">Our Kits</span>
             <button
               aria-label="Close search"
               onClick={onClose}
@@ -80,28 +75,32 @@ export default function SearchDropdown({ open, onClose }: SearchDropdownProps) {
             </button>
           </div>
 
-          <div style={{ marginTop: "1rem", display: "grid", gap: "0.75rem" }}>
+          <div style={{ marginTop: "0.75rem", display: "grid", gap: "0.5rem" }}>
             {kits.map((kit) => (
-              <div
+              <Link
                 key={kit.slug}
+                href={`/kits/${kit.slug}`}
+                onClick={onClose}
                 style={{
                   display: "flex",
                   alignItems: "center",
                   gap: "0.75rem",
+                  padding: "0.5rem",
+                  border: "1px solid var(--color-border)",
+                  borderRadius: "12px",
+                  background: "#fff",
                 }}
               >
-                <div style={{ width: "48px", flexShrink: 0 }}>
+                <div style={{ width: "56px", flexShrink: 0 }}>
                   <PlaceholderImage label={`[${kit.name}]`} aspectRatio="1 / 1" />
                 </div>
                 <div>
                   <p style={{ fontSize: "0.95rem", fontWeight: 500 }}>
                     {kit.name} — {formatPrice(kit.price)}
                   </p>
-                  <p style={{ fontSize: "0.95rem", color: "var(--color-muted)" }}>
-                    {kit.tagline}
-                  </p>
+                  <p style={{ fontSize: "0.9rem", color: "var(--color-muted)" }}>{kit.tagline}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </motion.div>

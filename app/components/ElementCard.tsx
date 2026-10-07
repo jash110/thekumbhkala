@@ -1,7 +1,8 @@
-import PlaceholderImage from "./PlaceholderImage";
+import ElementMedia from "./ElementMedia";
 import type { KumbhElement } from "../lib/data";
 
-export default function ElementCard({ name, location, description, mediaType = "image" }: KumbhElement) {
+export default function ElementCard(element: KumbhElement) {
+  const { name, location, description } = element;
   return (
     <div
       style={{
@@ -12,7 +13,9 @@ export default function ElementCard({ name, location, description, mediaType = "
         height: "100%",
       }}
     >
-      <PlaceholderImage label={`[Photo: ${name}]`} aspectRatio="1 / 1" mediaType={mediaType} />
+      <div style={{ position: "relative", aspectRatio: "1 / 1", width: "100%", borderRadius: "14px", overflow: "hidden" }}>
+        <ElementMedia {...element} />
+      </div>
       <h3 style={{ fontSize: "1.2rem", marginTop: "1.1rem" }}>{name}</h3>
       <p
         style={{

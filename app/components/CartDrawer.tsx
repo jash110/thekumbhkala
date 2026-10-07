@@ -193,6 +193,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                             <QuantityStepper
                               quantity={item.quantity}
+                              min={0}
                               onChange={(q) => updateQuantity(item.kitSlug, q)}
                             />
                             <span style={{ fontWeight: 600, color: "var(--color-marigold)" }}>

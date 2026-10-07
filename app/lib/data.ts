@@ -3,6 +3,7 @@ export interface ProductShot {
   src?: string;
   width?: number;
   height?: number;
+  videoSrc?: string;
 }
 
 export interface Kit {
@@ -32,6 +33,9 @@ const sharedProductShots: ProductShot[] = [
   { label: "Fridge Magnet", src: "/products/fridge-magnet.png", width: 1672, height: 941 },
   { label: "Godavari Jal (200ml)", src: "/products/godavari-jal.png", width: 941, height: 1672 },
   { label: "Kondaji Chivda (100g)", src: "/products/kondaji-chivda.png", width: 941, height: 1672 },
+  { label: "Leaflet", src: "/products/leaflet.png", width: 1536, height: 1024 },
+  { label: "Tote Bag", src: "/products/tote-bags-showcase.png", width: 1672, height: 941 },
+  { label: "Kalawa Thread", src: "/products/Kalawa.png", width: 1441, height: 1092 },
 ];
 
 export const kits: Kit[] = [
@@ -70,6 +74,8 @@ export interface KumbhElement {
   location: string;
   description: string;
   mediaType?: "image" | "video";
+  videoSrc?: string;
+  image?: string;
 }
 
 export const elements: KumbhElement[] = [
@@ -77,28 +83,33 @@ export const elements: KumbhElement[] = [
     name: "Godavari Jal",
     location: "Godavari Ghats, Nashik",
     description:
-      "Sacred river water carried home as a living memory of the Kumbh pilgrimage, representing the Dakshin Ganga's blessing.",
+      "Holy water drawn directly from the Godavari at the Triveni Sangam — the exact confluence where Kumbh pilgrims take their sacred dip. Pour it, keep it, or pass on its blessing; this is Nashik's sanctity, sealed and delivered to your home.",
     mediaType: "video",
+    videoSrc: "/products/godavari-jal-video.mp4",
   },
   {
     name: "Kalawa Thread",
     location: "Trimbakeshwar Temple",
     description:
-      "A sacred red-and-yellow thread tied during rituals, symbolizing protection and a vow kept through the Yatra.",
+      "Hand-tied in red and yellow at the Trimbakeshwar Temple, the kalawa is worn as a vow of protection and faith. Tie it on, and carry the temple's blessing with you long after Kumbh ends.",
     mediaType: "video",
+    videoSrc: "/products/kalawa-video.mp4",
   },
   {
-    name: "Diya",
-    location: "Ramkund, Nashik",
+    name: "Fridge Magnet",
+    location: "Handcrafted Keepsake, Nashik",
     description:
-      "A hand-lit lamp representing the light offered during aarti at the ghats, carried onward as a keepsake of devotion.",
+      "A laser-engraved wooden keepsake of Nashik's sacred skyline — Trimbakeshwar's shikhara and the Godavari ghats, carved to last. Stick it on your fridge and relive Kumbh every single day.",
+    image: "/products/fridge-magnet.png",
     mediaType: "video",
+    videoSrc: "/products/fridge-magnet-video.mp4",
   },
   {
     name: "Newspaper Tote Bag",
     location: "Printed in Nashik",
     description:
-      "A canvas tote printed in a vintage newspaper layout of real Kumbh 2027 headlines — one of five collectible designs.",
+      "Carried everywhere, remembered forever — this tote is printed like a pilgrim's passport, stamped with Kumbh 2027's sacred sites. Not just a bag — a story you'll tell for years.",
     mediaType: "video",
+    videoSrc: "/products/tote-bag-video.mp4",
   },
 ];
