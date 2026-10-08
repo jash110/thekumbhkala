@@ -5,15 +5,26 @@ interface PriceTagProps {
   price: number;
   size?: "sm" | "lg" | "xl";
   accent?: "marigold" | "gold" | "cream";
+  comingSoon?: boolean;
 }
 
-export default function PriceTag({ mrp, price, size = "sm", accent = "marigold" }: PriceTagProps) {
+export default function PriceTag({ mrp, price, size = "sm", accent = "marigold", comingSoon = false }: PriceTagProps) {
   const priceColor =
     accent === "cream" ? "var(--color-cream)" : accent === "gold" ? "var(--color-gold)" : "var(--color-marigold)";
   const mrpColor = accent === "cream" ? "rgba(240,232,220,0.85)" : "var(--color-muted)";
   const fontSize =
     size === "xl" ? "clamp(1.7rem, 2.6vw, 2.6rem)" : size === "lg" ? "1.4rem" : "1.05rem";
   const mrpFontSize = size === "xl" ? "1.1rem" : "0.85rem";
+
+  if (comingSoon) {
+    return (
+      <div style={{ display: "flex", alignItems: "baseline" }}>
+        <span style={{ fontFamily: "var(--font-display)", fontSize, fontWeight: 600, color: priceColor }}>
+          Coming Soon
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem" }}>

@@ -63,7 +63,8 @@ function readStored(): CartLine[] {
           !!i &&
           typeof i.kitSlug === "string" &&
           typeof i.quantity === "number" &&
-          !!getKit(i.kitSlug),
+          !!getKit(i.kitSlug) &&
+          !getKit(i.kitSlug)?.comingSoon,
       )
       .map((i) => ({ kitSlug: i.kitSlug, quantity: clampQty(i.quantity) }));
   } catch {

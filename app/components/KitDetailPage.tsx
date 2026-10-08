@@ -1,3 +1,4 @@
+import ComingSoonBadge from "./ComingSoonBadge";
 import Image from "next/image";
 import FadeIn from "./FadeIn";
 import PlaceholderImage from "./PlaceholderImage";
@@ -40,6 +41,7 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
               rounded={false}
             />
           </FadeIn>
+          {kit.comingSoon && <ComingSoonBadge />}
           <p className="kit-top-caption">Box: [DIMENSIONS PLACEHOLDER]</p>
         </div>
 

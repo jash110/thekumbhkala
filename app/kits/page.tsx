@@ -3,6 +3,7 @@ import Link from "next/link";
 import FadeIn from "../components/FadeIn";
 import PlaceholderImage from "../components/PlaceholderImage";
 import PriceTag from "../components/PriceTag";
+import ComingSoonBadge from "../components/ComingSoonBadge";
 import ToteShowcase from "../components/ToteShowcase";
 import Bilingual from "../components/Bilingual";
 import { kits } from "../lib/data";
@@ -65,16 +66,19 @@ export default function KitsPage() {
                     height: "100%",
                   }}
                 >
-                  <PlaceholderImage
-                    label={`[Photo: ${kit.name} packaging]`}
-                    aspectRatio="4 / 3"
-                    tone={isTrimbak ? "maroon" : "cream"}
-                  />
+                  <div style={{ position: "relative" }}>
+                    <PlaceholderImage
+                      label={`[Photo: ${kit.name} packaging]`}
+                      aspectRatio="4 / 3"
+                      tone={isTrimbak ? "maroon" : "cream"}
+                    />
+                    {kit.comingSoon && <ComingSoonBadge />}
+                  </div>
                   <h2 style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}>
                     {kit.name}
                   </h2>
                   <div style={{ marginBottom: "0.75rem" }}>
-                    <PriceTag mrp={kit.mrp} price={kit.price} size="lg" accent={isTrimbak ? "cream" : "marigold"} />
+                    <PriceTag mrp={kit.mrp} price={kit.price} comingSoon={kit.comingSoon} size="lg" accent={isTrimbak ? "cream" : "marigold"} />
                   </div>
                   <p style={{ fontSize: "clamp(1.05rem, 1.2vw, 1.15rem)", lineHeight: 1.6, color: isTrimbak ? "rgba(240,232,220,0.75)" : "var(--color-muted)" }}>
                     {kit.description}

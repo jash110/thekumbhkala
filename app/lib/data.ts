@@ -12,6 +12,7 @@ export interface Kit {
   tagline: string;
   mrp: number; // TODO: replace with final MRP once pricing is confirmed
   price: number; // TODO: replace with final sale price once pricing is confirmed
+  comingSoon?: boolean; // not yet purchasable: shows "Coming Soon" instead of a price
   description: string;
   whatsInside: string[];
   heroImage: ProductShot;
@@ -44,8 +45,8 @@ export const kits: Kit[] = [
     slug: "sangam",
     name: "Sangam Kit",
     tagline: "The starter set of ritual and remembrance.",
-    mrp: 1499, // TODO: placeholder MRP
-    price: 1199, // TODO: placeholder price
+    mrp: 1199,
+    price: 999,
     description:
       "A curated starter set of ritual and remembrance from the Kumbh Mela.",
     whatsInside: sharedItems,
@@ -56,8 +57,9 @@ export const kits: Kit[] = [
     slug: "trimbak",
     name: "Trimbak Kit",
     tagline: "Everything in Sangam, elevated for gifting.",
-    mrp: 2999, // TODO: placeholder MRP
-    price: 2399, // TODO: placeholder price
+    mrp: 0, // no price yet — see comingSoon
+    price: 0,
+    comingSoon: true,
     description:
       "Everything in Sangam, plus more — in elevated packaging worth gifting.",
     whatsInside: [...sharedItems, "[ADDITIONAL PREMIUM ITEMS — TBD]"],

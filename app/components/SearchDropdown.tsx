@@ -96,7 +96,7 @@ export default function SearchDropdown({ open, onClose }: SearchDropdownProps) {
                 </div>
                 <div>
                   <p style={{ fontSize: "0.95rem", fontWeight: 500 }}>
-                    {kit.name} — {formatPrice(kit.price)}
+                    {kit.name} — {kit.comingSoon ? "Coming Soon" : formatPrice(kit.price)}
                   </p>
                   <p style={{ fontSize: "0.9rem", color: "var(--color-muted)" }}>{kit.tagline}</p>
                 </div>

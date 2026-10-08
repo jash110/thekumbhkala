@@ -33,7 +33,7 @@ export default function ContactPage() {
               Contact Details
             </span>
             <div style={{ fontSize: "1rem", lineHeight: 2, color: "var(--color-muted)" }}>
-              <p>info@kumbhkala.com</p>
+              <p>thekumbhkala@gmail.com</p>
               <p>+91 90227 43147</p>
               <p>Nashik, Maharashtra</p>
             </div>
