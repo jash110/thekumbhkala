@@ -9,11 +9,7 @@ export default function StoryTeaser() {
       <FadeIn>
         <Bilingual as="label" en="Our Story" hi="हमारी कहानी" />
       </FadeIn>
-      <FadeIn delay={0.1}>
-        <h2 style={{ margin: "1.25rem 0 1.5rem" }}>
-          Once ToteYatra, now Kumbhkala.
-        </h2>
-      </FadeIn>
+      <div style={{ height: "1.5rem" }} />
       {HOME_STORY_TEASER.map((line, i) => (
         <FadeIn key={i} delay={0.2 + i * 0.1}>
           <p

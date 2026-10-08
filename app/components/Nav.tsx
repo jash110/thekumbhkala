@@ -197,13 +197,6 @@ export default function Nav() {
             </svg>
           </button>
 
-          <button aria-label="Account" style={{ background: "none", border: "none" }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="8" r="3.5" stroke="var(--color-ink)" strokeWidth="1.5" />
-              <path d="M4.5 20c1.5-4 4.5-6 7.5-6s6 2 7.5 6" stroke="var(--color-ink)" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </button>
-
           <button
             aria-label="Cart"
             onClick={openDrawer}

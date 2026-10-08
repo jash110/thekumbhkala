@@ -50,7 +50,7 @@ export const ABOUT_PARAGRAPHS: AboutParagraph[] = [
 ];
 
 export const HOME_STORY_TEASER: AboutParagraph[] = [
-  { text: "I grew up in Nashik surrounded by temples and traditions I never truly understood." },
-  { text: "Then one simple question, why?, changed how I saw everything." },
-  { text: "This is how Kumbhkala began.", italic: true },
+  { text: "I'm a 23-year-old Nashikkar, raised among this city's temples and traditions — without ever truly understanding them." },
+  { text: "One simple question, why?, began a journey that changed how I saw my own city." },
+  { text: "Kumbhkala is my tribute to Nashik and the sacred Kumbh — an invitation for others to begin that same journey.", italic: true },
 ];
