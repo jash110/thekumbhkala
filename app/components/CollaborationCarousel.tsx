@@ -6,6 +6,8 @@ import Image from "next/image";
 const IMAGES = [
   { src: "/our-craft/collaboration-1.jpg", alt: "Our first collaboration — photo 1" },
   { src: "/our-craft/collaboration-2.jpg", alt: "Our first collaboration — photo 2" },
+  { src: "/our-craft/collaboration-3.jpeg", alt: "Our first collaboration — photo 3" },
+  { src: "/our-craft/collaboration-4.jpeg", alt: "Our first collaboration — photo 4" },
 ];
 const INTERVAL_MS = 3500;
 

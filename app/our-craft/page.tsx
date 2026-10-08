@@ -137,6 +137,12 @@ export default function OurCraftPage() {
             gap: clamp(2rem, 4vw, 4rem);
             align-items: start;
           }
+          /* photo stretches to the text column's height; images cover-crop, never distort */
+          .collab-media {
+            align-self: stretch;
+            aspect-ratio: auto;
+            min-height: 320px;
+          }
         }
       `}</style>
     </div>
