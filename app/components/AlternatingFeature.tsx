@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FadeIn from "./FadeIn";
 import PlaceholderImage from "./PlaceholderImage";
 import SplitSection from "./SplitSection";
@@ -8,16 +9,30 @@ interface AlternatingFeatureProps {
   titleHi?: string;
   body: string;
   imageLabel: string;
+  imageSrc?: string;
+  imageAlt?: string;
   reverse?: boolean;
 }
 
-export default function AlternatingFeature({ title, titleHi, body, imageLabel, reverse = false }: AlternatingFeatureProps) {
+export default function AlternatingFeature({ title, titleHi, body, imageLabel, imageSrc, imageAlt, reverse = false }: AlternatingFeatureProps) {
   return (
     <SplitSection
       imageSide={reverse ? "left" : "right"}
       imageAspect="4 / 3"
       imageWidthPercent={55}
-      image={<PlaceholderImage label={imageLabel} fill rounded={false} />}
+      image={
+        imageSrc ? (
+          <Image
+            src={imageSrc}
+            alt={imageAlt ?? title}
+            fill
+            sizes="(min-width: 768px) 55vw, 100vw"
+            style={{ objectFit: "cover" }}
+          />
+        ) : (
+          <PlaceholderImage label={imageLabel} fill rounded={false} />
+        )
+      }
     >
       <FadeIn>
         {titleHi ? (

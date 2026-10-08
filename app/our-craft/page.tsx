@@ -86,6 +86,8 @@ export default function OurCraftPage() {
         titleHi="नाशिक में मुद्रित"
         body="Our tote bags, leaflets, and packaging are printed locally in Nashik, often carrying real Devanagari typography drawn from the city's own newspapers and signage — a small way of keeping the craft rooted where the Yatra happens."
         imageLabel="[Photo: local printing press / Devanagari typography detail]"
+        imageSrc="/our-craft/printng-press.png"
+        imageAlt="Printing press at work in Nashik"
       />
       <AlternatingFeature
         title="Sourced with Intention"
@@ -99,6 +101,8 @@ export default function OurCraftPage() {
         titleHi="सहेजने के लिए बना"
         body="We build with materials meant to last — canvas, metal, and glass rather than plastic and foil — because a souvenir worth keeping shouldn't be disposable."
         imageLabel="[Photo: durable materials — canvas, metal, glass detail]"
+        imageSrc="/our-craft/fridge-magnet-carving.png"
+        imageAlt="Fridge magnet being carved"
       />
 
       <style>{`
