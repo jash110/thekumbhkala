@@ -94,6 +94,8 @@ export default function OurCraftPage() {
         titleHi="श्रद्धा से चुना गया"
         body="Godavari Jal is drawn from the Godavari Ghats, Kalawa thread is tied at Trimbakeshwar Temple, and each diya is lit at Ramkund — every element travels the same path as the pilgrims who carry it home."
         imageLabel="[Photo: Godavari Ghats / Trimbakeshwar Temple / Ramkund sourcing]"
+        imageSrc="/our-craft/godavari-jal-sourcing.png"
+        imageAlt="Godavari Jal being sourced at the Godavari ghats"
         reverse
       />
       <AlternatingFeature

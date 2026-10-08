@@ -20,6 +20,7 @@ export default function AlternatingFeature({ title, titleHi, body, imageLabel, i
       imageSide={reverse ? "left" : "right"}
       imageAspect="4 / 3"
       imageWidthPercent={55}
+      style={{ marginBlock: "clamp(48px, 6vw, 96px)" }}
       image={
         imageSrc ? (
           <Image
