@@ -1,3 +1,4 @@
+import { pageMetadata } from "../lib/seo";
 import FadeIn from "../components/FadeIn";
 import CollaborationCarousel from "../components/CollaborationCarousel";
 import AlternatingFeature from "../components/AlternatingFeature";
@@ -5,9 +6,13 @@ import Bilingual from "../components/Bilingual";
 import ElementGrid from "../components/ElementGrid";
 import { elements } from "../lib/data";
 
-export const metadata = {
-  title: "Our Craft — Kumbhkala",
-};
+export const metadata = pageMetadata({
+  title: "Our Craft — Authentic Kumbh Mela Souvenirs Sourced in Nashik | Kumbhkala",
+  description:
+    "See how Kumbhkala's Kumbh 2027 souvenirs are made: Godavari Jal from the Nashik ghats, kalawa tied at Trimbakeshwar, laser-engraved magnets and tote bags printed in Nashik.",
+  path: "/our-craft",
+  image: "/our-craft/collaboration-1.jpg",
+});
 
 export default function OurCraftPage() {
   return (

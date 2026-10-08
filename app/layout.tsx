@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { NavBrandProvider } from "./components/NavBrandVisibility";
 import { CartProvider } from "./components/CartContext";
+import { SITE_URL, pageMetadata } from "./lib/seo";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -32,9 +33,13 @@ const notoSerifDevanagari = Noto_Serif_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: "Kumbhkala — कुम्भकला",
-  description:
-    "Kumbhkala — Kumbh Mela souvenir and ritual-kit hampers for Nashik Simhastha 2027.",
+  metadataBase: new URL(SITE_URL),
+  ...pageMetadata({
+    title: "Kumbhkala — Kumbh Mela 2027 Souvenir & Ritual Kits from Nashik",
+    description:
+      "Kumbhkala brings you authentic Kumbh Mela souvenir and ritual kits for Nashik Simhastha Kumbh 2027 — Godavari Jal, Trimbakeshwar kalawa, handcrafted keepsakes and more.",
+    path: "/",
+  }),
 };
 
 export default function RootLayout({

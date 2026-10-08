@@ -1,3 +1,4 @@
+import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 import FadeIn from "../components/FadeIn";
 import PlaceholderImage from "../components/PlaceholderImage";
@@ -6,9 +7,12 @@ import ToteShowcase from "../components/ToteShowcase";
 import Bilingual from "../components/Bilingual";
 import { kits } from "../lib/data";
 
-export const metadata = {
-  title: "Kits — Kumbhkala",
-};
+export const metadata = pageMetadata({
+  title: "Shop Kumbh Mela Souvenir Kits — Sangam & Trimbak Kits | Kumbhkala",
+  description:
+    "Pre-book Kumbhkala's Kumbh Mela 2027 souvenir kits from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Trimbak Kit, elevated for gifting.",
+  path: "/kits",
+});
 
 export default function KitsPage() {
   return (
