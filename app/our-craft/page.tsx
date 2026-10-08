@@ -6,6 +6,14 @@ import Bilingual from "../components/Bilingual";
 import ElementGrid from "../components/ElementGrid";
 import { elements } from "../lib/data";
 
+const COLLABORATION_STORY = [
+  "We’re delighted to have collaborated with Carbide India to bring a little piece of Nashik to their international guests from Taiwan.",
+  "During a B2B meeting at AIMA Nashik, Carbide India chose Kumbh Kala to share the essence of Nashik through a thoughtfully curated souvenir.",
+  "For us, this collaboration is more than a gifting opportunity - it is a way of taking our history, traditions and culture beyond its borders.",
+  "We’re grateful to Carbide India for trusting Kumbh Kala to represent the spirit of this city.",
+  "Here’s to more collaborations that carry a piece of our culture wherever they go.",
+];
+
 export const metadata = pageMetadata({
   title: "Our Craft — Authentic Kumbh Mela Souvenirs Sourced in Nashik | Kumbhkala",
   description:
@@ -50,9 +58,14 @@ export default function OurCraftPage() {
         <div>
           <FadeIn>
             <Bilingual as="h2" en="Our First Collaboration" hi="हमारी कहानियाँ" hiSize="max(1.2rem, calc(0.62 * clamp(2rem, 4vw, 3.6rem)))" style={{ marginBottom: "1.25rem" }} />
-            <p style={{ color: "var(--color-muted)", fontStyle: "italic" }}>
-              [COLLABORATION STORY TEXT — TBD, to be added later]
-            </p>
+            {COLLABORATION_STORY.map((text) => (
+              <p
+                key={text}
+                style={{ color: "var(--color-muted)", lineHeight: 1.75, marginBottom: "1rem", maxWidth: "64ch" }}
+              >
+                {text}
+              </p>
+            ))}
           </FadeIn>
         </div>
         <FadeIn delay={0.1} className="collab-media">
