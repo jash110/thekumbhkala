@@ -71,24 +71,25 @@ export default function Footer() {
           <NewsletterSignup />
 
           <div style={{ display: "flex", gap: "0.75rem", marginTop: "1.5rem" }}>
-            {["IG", "FB", "X"].map((s) => (
-              <span
-                key={s}
-                style={{
-                  width: "34px",
-                  height: "34px",
-                  borderRadius: "50%",
-                  border: "1px solid rgba(240,232,220,0.3)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "0.72rem",
-                  color: "rgba(240,232,220,0.7)",
-                }}
-              >
-                {s}
-              </span>
-            ))}
+            <a
+              href="https://www.instagram.com/thekumbhkala?stkn=MWFwNW5wazdmYXdjMw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Kumbhkala on Instagram"
+              style={{
+                width: "34px",
+                height: "34px",
+                borderRadius: "50%",
+                border: "1px solid rgba(240,232,220,0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "0.72rem",
+                color: "rgba(240,232,220,0.7)",
+              }}
+            >
+              IG
+            </a>
           </div>
         </div>
       </div>

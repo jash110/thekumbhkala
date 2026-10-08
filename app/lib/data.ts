@@ -33,6 +33,7 @@ const sharedProductShots: ProductShot[] = [
   { label: "Fridge Magnet", src: "/products/fridge-magnet.png", width: 1672, height: 941 },
   { label: "Godavari Jal (200ml)", src: "/products/godavari-jal.png", width: 941, height: 1672 },
   { label: "Kondaji Chivda (100g)", src: "/products/kondaji-chivda.png", width: 941, height: 1672 },
+  { label: "Raisins & Dry Fruit (100g)", src: "/products/raisins.png", width: 1312, height: 1199 },
   { label: "Leaflet", src: "/products/leaflet.png", width: 1536, height: 1024 },
   { label: "Tote Bag", src: "/products/tote-bags-showcase.png", width: 1672, height: 941 },
   { label: "Kalawa Thread", src: "/products/Kalawa.png", width: 1441, height: 1092 },
