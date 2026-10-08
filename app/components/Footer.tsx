@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterSignup from "./NewsletterSignup";
+import { whatsappUrl } from "../lib/whatsapp";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -9,7 +10,15 @@ const quickLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-const supportLinks = ["Authenticity", "FAQ", "Returns and Refunds"];
+const supportLinks = [
+  { label: "Authenticity", href: "/our-craft" },
+  { label: "FAQ", href: "/faq" },
+  {
+    label: "Returns and Refunds",
+    href: whatsappUrl("Hi Kumbhkala, I have a question about returns and refunds."),
+    external: true,
+  },
+];
 
 export default function Footer() {
   return (
@@ -54,11 +63,22 @@ export default function Footer() {
             Support
           </span>
           <ul style={{ display: "grid", gap: "0.65rem" }}>
-            {supportLinks.map((label) => (
-              <li key={label}>
-                <a href="#" style={{ color: "rgba(240,232,220,0.8)", fontSize: "0.95rem" }}>
-                  {label}
-                </a>
+            {supportLinks.map((link) => (
+              <li key={link.label}>
+                {link.external ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "rgba(240,232,220,0.8)", fontSize: "0.95rem" }}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link href={link.href} style={{ color: "rgba(240,232,220,0.8)", fontSize: "0.95rem" }}>
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
