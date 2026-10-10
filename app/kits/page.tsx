@@ -1,6 +1,7 @@
 import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 import FadeIn from "../components/FadeIn";
+import BulkGiftingCard from "../components/BulkGiftingCard";
 import PlaceholderImage from "../components/PlaceholderImage";
 import PriceTag from "../components/PriceTag";
 import ComingSoonBadge from "../components/ComingSoonBadge";
@@ -142,6 +143,10 @@ export default function KitsPage() {
       </div>
 
       <ToteShowcase />
+
+      <div style={{ padding: "0 var(--page-gutter) clamp(48px, 6vw, 80px)" }}>
+        <BulkGiftingCard />
+      </div>
 
       <style>{`
         .kits-intro {

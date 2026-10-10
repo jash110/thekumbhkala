@@ -2,6 +2,7 @@ import { pageMetadata } from "../lib/seo";
 import FadeIn from "../components/FadeIn";
 import CollaborationCarousel from "../components/CollaborationCarousel";
 import AlternatingFeature from "../components/AlternatingFeature";
+import InstagramBanner from "../components/InstagramBanner";
 import Bilingual from "../components/Bilingual";
 import ElementGrid from "../components/ElementGrid";
 import { elements } from "../lib/data";
@@ -119,6 +120,8 @@ export default function OurCraftPage() {
         imageSrc="/our-craft/fridge-magnet-carving.png"
         imageAlt="Fridge magnet being carved"
       />
+
+      <InstagramBanner />
 
       <style>{`
         .craft-top {

@@ -1,6 +1,7 @@
 import { pageMetadata } from "../lib/seo";
 import FadeIn from "../components/FadeIn";
 import ContactForm from "../components/ContactForm";
+import BulkGiftingCard from "../components/BulkGiftingCard";
 import Bilingual from "../components/Bilingual";
 
 export const metadata = pageMetadata({
@@ -40,6 +41,12 @@ export default function ContactPage() {
           </div>
         </FadeIn>
       </div>
+
+      <FadeIn delay={0.2}>
+        <div style={{ marginTop: "3rem" }}>
+          <BulkGiftingCard />
+        </div>
+      </FadeIn>
 
       <style>{`
         .contact-grid {

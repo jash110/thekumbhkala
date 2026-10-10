@@ -7,6 +7,8 @@ import FeaturedKits from "./components/FeaturedKits";
 import WhyPreBooking from "./components/WhyPreBooking";
 import ElementStoriesTeaser from "./components/ElementStoriesTeaser";
 import StoryTeaser from "./components/StoryTeaser";
+import InstagramPopup from "./components/InstagramPopup";
+import InstagramBanner from "./components/InstagramBanner";
 import ClosingCTA from "./components/ClosingCTA";
 
 export const metadata = pageMetadata({
@@ -27,7 +29,9 @@ export default function Home() {
       <WhyPreBooking />
       <ElementStoriesTeaser />
       <StoryTeaser />
+      <InstagramBanner />
       <ClosingCTA />
+      <InstagramPopup />
     </div>
   );
 }
