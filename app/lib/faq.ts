@@ -13,7 +13,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Are the items really sourced from Nashik?",
-    a: "Yes. Every kit is built around items sourced directly in and around Nashik — Godavari Jal from the ghats, Kalawa thread tied at Trimbakeshwar, and totes and leaflets printed locally. You can read more on our Our Craft page.",
+    a: "Yes. Every kit is built around items sourced directly in and around Nashik: Godavari Jal from the ghats, Kalawa thread tied at Trimbakeshwar, and totes and leaflets printed locally. You can read more on our Our Craft page.",
   },
   {
     q: "When will I receive my kit?",
@@ -21,7 +21,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can I cancel or change my pre-booking?",
-    a: "Yes — message us on WhatsApp with your order details and we'll help you cancel or make changes.",
+    a: "Yes. Message us on WhatsApp with your order details and we'll help you cancel or make changes.",
   },
   {
     q: "Do you deliver across India?",
@@ -29,6 +29,6 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How can I contact Kumbhkala for other questions?",
-    a: "The fastest way is WhatsApp — tap the WhatsApp button anywhere on the site, or visit our Contact page.",
+    a: "The fastest way is WhatsApp: tap the WhatsApp button anywhere on the site, or visit our Contact page.",
   },
 ];

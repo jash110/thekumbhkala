@@ -115,11 +115,11 @@ export default function ContactForm() {
           phase={flow.phase}
           onOpen={openWhatsAppNow}
           onCancel={flow.reset}
-          openedText="WhatsApp opened in a new tab — press Send there to complete your message."
+          openedText="WhatsApp opened in a new tab. Press Send there to complete your message."
         />
       )}
       <p style={{ fontSize: "0.85rem", color: "var(--color-muted)" }}>
-        We&apos;ll get back to you on WhatsApp — this form doesn&apos;t send an email directly yet.
+        We&apos;ll get back to you on WhatsApp, as this form doesn&apos;t send an email directly yet.
       </p>
     </form>
   );

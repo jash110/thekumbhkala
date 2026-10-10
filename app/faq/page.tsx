@@ -3,7 +3,7 @@ import FadeIn from "../components/FadeIn";
 import { FAQS } from "../lib/faq";
 
 export const metadata = pageMetadata({
-  title: "FAQ — Kumbh Mela 2027 Kits, Pre-Booking & Delivery | Kumbhkala",
+  title: "FAQ: Kumbh Mela 2027 Kits, Pre-Booking & Delivery | Kumbhkala",
   description:
     "Answers to common questions about Kumbhkala's Kumbh Mela 2027 souvenir kits: how to pre-book, Sangam vs Trimbak Kit, sourcing from Nashik, delivery and changes.",
   path: "/faq",

@@ -70,8 +70,8 @@ export default function Hero() {
 
       <FadeIn delay={0.3}>
         <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-muted)", maxWidth: "48ch" }}>
-          Kumbhkala brings together the elements of the Kumbh Yatra — the
-          sacred, the tasted, the kept — into one hamper you carry home.
+          Kumbhkala brings together the elements of the Kumbh Yatra: the
+          sacred, the tasted, the kept, into one hamper you carry home.
         </p>
       </FadeIn>
 

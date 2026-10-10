@@ -11,8 +11,8 @@ export default function PrincipleSection() {
       <FadeIn delay={0.1}>
         <Bilingual
           as="h2"
-          en="More than souvenirs — an experience you carry home."
-          hi="सिर्फ़ यादगार नहीं — एक अनुभव जो आप घर ले जाएँ।"
+          en="More than souvenirs, an experience you carry home."
+          hi="सिर्फ़ यादगार नहीं, एक अनुभव जो आप घर ले जाएँ।"
           style={{ margin: "1.25rem 0 1.5rem" }}
         />
       </FadeIn>

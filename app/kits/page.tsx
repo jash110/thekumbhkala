@@ -9,7 +9,7 @@ import Bilingual from "../components/Bilingual";
 import { kits } from "../lib/data";
 
 export const metadata = pageMetadata({
-  title: "Shop Kumbh Mela Souvenir Kits — Sangam & Trimbak Kits | Kumbhkala",
+  title: "Shop Kumbh Mela Souvenir Kits: Sangam & Trimbak Kits | Kumbhkala",
   description:
     "Pre-book Kumbhkala's Kumbh Mela 2027 souvenir kits from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Trimbak Kit, elevated for gifting.",
   path: "/kits",
@@ -40,7 +40,7 @@ export default function KitsPage() {
 
         <FadeIn delay={0.2}>
           <p style={{ fontSize: "clamp(1.05rem, 1.3vw, 1.2rem)", lineHeight: 1.75, color: "var(--color-muted)", maxWidth: "64ch" }}>
-            Experience the essence of the Kumbh Mela from home — sacred
+            Experience the essence of the Kumbh Mela from home: sacred
             elements, local flavors, and a keepsake to carry the memory
             forward. Each kit is assembled with intention, inspired by the
             journey of the Yatra itself.

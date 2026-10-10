@@ -35,9 +35,9 @@ const notoSerifDevanagari = Noto_Serif_Devanagari({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   ...pageMetadata({
-    title: "Kumbhkala — Kumbh Mela 2027 Souvenir & Ritual Kits from Nashik",
+    title: "Kumbhkala | Kumbh Mela 2027 Souvenir & Ritual Kits from Nashik",
     description:
-      "Kumbhkala brings you authentic Kumbh Mela souvenir and ritual kits for Nashik Simhastha Kumbh 2027 — Godavari Jal, Trimbakeshwar kalawa, handcrafted keepsakes and more.",
+      "Kumbhkala brings you authentic Kumbh Mela souvenir and ritual kits for Nashik Simhastha Kumbh 2027: Godavari Jal, Trimbakeshwar kalawa, handcrafted keepsakes and more.",
     path: "/",
   }),
 };

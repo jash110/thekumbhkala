@@ -11,7 +11,7 @@ export interface HomeImageSlot {
 export const homeImages: Record<string, HomeImageSlot> = {
   hero: {
     label:
-      "[Photo: Ramkund ghat on the Godavari at dawn during Kumbh — pilgrims in the river, saffron flags, floating diyas, temple spires in mist]",
+      "[Photo: Ramkund ghat on the Godavari at dawn during Kumbh, pilgrims in the river, saffron flags, floating diyas, temple spires in mist]",
     src: "/home/hero-ramkund.jpg",
   },
   kumbhContext: {

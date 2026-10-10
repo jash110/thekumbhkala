@@ -207,7 +207,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
 
                   <div style={{ padding: "1.25rem 0", borderBottom: "1px solid var(--color-border)" }}>
                     <label style={labelStyle}>
-                      Discount Code <span style={{ textTransform: "none" }}>— coming soon</span>
+                      Discount Code <span style={{ textTransform: "none" }}>(coming soon)</span>
                     </label>
                     <input
                       disabled
@@ -293,7 +293,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                       onOpen={openOrder}
                       onCancel={flow.reset}
                       onDone={finishOrder}
-                      openedText="WhatsApp opened in a new tab — press Send there to complete your order."
+                      openedText="WhatsApp opened in a new tab. Press Send there to complete your order."
                     />
                   )}
                   <p
@@ -304,7 +304,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                       marginTop: "0.75rem",
                     }}
                   >
-                    Checkout and online payment aren&apos;t live yet — placing an order opens WhatsApp
+                    Checkout and online payment aren&apos;t live yet, so placing an order opens WhatsApp
                     with your details prefilled so we can confirm it with you directly.
                   </p>
                 </div>

@@ -5,7 +5,7 @@ import Bilingual from "../components/Bilingual";
 import { SHLOKA_LINE_1, SHLOKA_LINE_2, SHLOKA_CITATION, ABOUT_SUBHEADING, ABOUT_PARAGRAPHS } from "../lib/copy";
 
 export const metadata = pageMetadata({
-  title: "Our Story — Why We Created Kumbhkala | Kumbh Mela 2027, Nashik",
+  title: "Our Story: Why We Created Kumbhkala | Kumbh Mela 2027, Nashik",
   description:
     "The story behind Kumbhkala: a Nashik-rooted brand preserving the rituals and memories of the Simhastha Kumbh Mela in keepsake kits made to be carried home.",
   path: "/about",

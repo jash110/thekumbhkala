@@ -39,7 +39,7 @@ export function buildOrderMessage(params: {
   const lines = params.items.flatMap((item) => {
     const kit = getKit(item.kitSlug);
     if (!kit) return [];
-    return [`${kit.name} × ${item.quantity} — ${formatPrice(kit.price * item.quantity)}`];
+    return [`${kit.name} × ${item.quantity}: ${formatPrice(kit.price * item.quantity)}`];
   });
 
   return [

@@ -6,7 +6,7 @@ import Bilingual from "./Bilingual";
 const stats = [
   { stat: "12", label: "Years Between Each Simhastha Kumbh at Nashik" },
   { stat: "4", label: "Sacred Cities That Host the Kumbh Mela" },
-  { stat: "1 of 12", label: "Trimbakeshwar — A Jyotirlinga of Lord Shiva" },
+  { stat: "1 of 12", label: "Trimbakeshwar: A Jyotirlinga of Lord Shiva" },
 ];
 
 export default function KumbhContext() {
@@ -32,11 +32,11 @@ export default function KumbhContext() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p style={{ fontSize: "1.08rem", lineHeight: 1.8, color: "var(--color-muted)", marginBottom: "1.1rem" }}>
-            The Kumbh Mela is one of the largest gatherings of faith on Earth —
+            The Kumbh Mela is one of the largest gatherings of faith on Earth:
             a pilgrimage that returns to four sacred cities once every twelve
             years, following a cycle tied to the positions of Jupiter and the
             Sun. In 2027, that cycle brings the Simhastha Kumbh to Nashik, on
-            the banks of the Godavari river, often called the Dakshin Ganga —
+            the banks of the Godavari river, often called the Dakshin Ganga,
             the Ganges of the South.
           </p>
         </FadeIn>
@@ -46,7 +46,7 @@ export default function KumbhContext() {
             Jyotirlingas of Lord Shiva, and take the sacred Shahi Snan at
             Ramkund, believed to wash away lifetimes of karma. Millions will
             arrive from across India and the world, carrying nothing but
-            intention — and leaving with memories that last another twelve
+            intention, and leaving with memories that last another twelve
             years. Kumbhkala exists to hold a small piece of that memory in
             your hands, long after the crowds have gone home. This is where
             that journey begins.

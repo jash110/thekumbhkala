@@ -15,7 +15,7 @@ const COLLABORATION_STORY = [
 ];
 
 export const metadata = pageMetadata({
-  title: "Our Craft — Authentic Kumbh Mela Souvenirs Sourced in Nashik | Kumbhkala",
+  title: "Our Craft: Authentic Kumbh Mela Souvenirs Sourced in Nashik | Kumbhkala",
   description:
     "See how Kumbhkala's Kumbh 2027 souvenirs are made: Godavari Jal from the Nashik ghats, kalawa tied at Trimbakeshwar, laser-engraved magnets and tote bags printed in Nashik.",
   path: "/our-craft",
@@ -50,7 +50,7 @@ export default function OurCraftPage() {
               Every element in a Kumbhkala kit is sourced with intention, not
               convenience. We work directly with vendors, temple trusts, and
               printers in and around Nashik so that what reaches you is what
-              we said it would be — the same water, the same thread, the
+              we said it would be: the same water, the same thread, the
               same soil that the Yatra itself moves through.
             </p>
           </FadeIn>
@@ -97,7 +97,7 @@ export default function OurCraftPage() {
       <AlternatingFeature
         title="Printed in Nashik"
         titleHi="नाशिक में मुद्रित"
-        body="Our tote bags, leaflets, and packaging are printed locally in Nashik, often carrying real Devanagari typography drawn from the city's own newspapers and signage — a small way of keeping the craft rooted where the Yatra happens."
+        body="Our tote bags, leaflets, and packaging are printed locally in Nashik, often carrying real Devanagari typography drawn from the city's own newspapers and signage, a small way of keeping the craft rooted where the Yatra happens."
         imageLabel="[Photo: local printing press / Devanagari typography detail]"
         imageSrc="/our-craft/printng-press.png"
         imageAlt="Printing press at work in Nashik"
@@ -105,7 +105,7 @@ export default function OurCraftPage() {
       <AlternatingFeature
         title="Sourced with Intention"
         titleHi="श्रद्धा से चुना गया"
-        body="Godavari Jal is drawn from the Godavari Ghats, Kalawa thread is tied at Trimbakeshwar Temple, and each diya is lit at Ramkund — every element travels the same path as the pilgrims who carry it home."
+        body="Godavari Jal is drawn from the Godavari Ghats, Kalawa thread is tied at Trimbakeshwar Temple, and each diya is lit at Ramkund, and every element travels the same path as the pilgrims who carry it home."
         imageLabel="[Photo: Godavari Ghats / Trimbakeshwar Temple / Ramkund sourcing]"
         imageSrc="/our-craft/godavari-jal-sourcing.png"
         imageAlt="Godavari Jal being sourced at the Godavari ghats"
@@ -114,8 +114,8 @@ export default function OurCraftPage() {
       <AlternatingFeature
         title="Made to Keep"
         titleHi="सहेजने के लिए बना"
-        body="We build with materials meant to last — canvas, metal, and glass rather than plastic and foil — because a souvenir worth keeping shouldn't be disposable."
-        imageLabel="[Photo: durable materials — canvas, metal, glass detail]"
+        body="We build with materials meant to last (canvas, metal, and glass rather than plastic and foil) because a souvenir worth keeping shouldn't be disposable."
+        imageLabel="[Photo: durable materials: canvas, metal, glass detail]"
         imageSrc="/our-craft/fridge-magnet-carving.png"
         imageAlt="Fridge magnet being carved"
       />

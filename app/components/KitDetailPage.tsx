@@ -26,7 +26,7 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
   const displayElements = isTrimbak
     ? [
         ...elements,
-        { name: "[Additional premium element — TBD]", location: "TBD", description: "A premium ritual element exclusive to the Trimbak Kit, to be finalized before launch." },
+        { name: "[Additional premium element: TBD]", location: "TBD", description: "A premium ritual element exclusive to the Trimbak Kit, to be finalized before launch." },
       ]
     : elements;
 

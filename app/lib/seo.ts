@@ -25,7 +25,7 @@ export function pageMetadata({
       siteName: "Kumbhkala",
       locale: "en_IN",
       type: "website",
-      images: [{ url: image, alt: "Kumbhkala — Kumbh Mela 2027 souvenir kits from Nashik" }],
+      images: [{ url: image, alt: "Kumbhkala | Kumbh Mela 2027 souvenir kits from Nashik" }],
     },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };

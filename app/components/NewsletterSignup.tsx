@@ -83,7 +83,7 @@ export default function NewsletterSignup() {
         variant="dark"
         onOpen={openWhatsAppNow}
         onCancel={flow.reset}
-        openedText="WhatsApp opened in a new tab — press Send there to finish signing up."
+        openedText="WhatsApp opened in a new tab. Press Send there to finish signing up."
       />
     </form>
   );

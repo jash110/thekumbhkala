@@ -51,7 +51,7 @@ export const kits: Kit[] = [
     description:
       "A curated starter set of ritual and remembrance from the Kumbh Mela.",
     whatsInside: sharedItems,
-    heroImage: { label: "Sangam Kit — full hamper" },
+    heroImage: { label: "Sangam Kit: full hamper" },
     productShots: sharedProductShots,
   },
   {
@@ -62,9 +62,9 @@ export const kits: Kit[] = [
     price: 0,
     comingSoon: true,
     description:
-      "Everything in Sangam, plus more — in elevated packaging worth gifting.",
-    whatsInside: [...sharedItems, "[ADDITIONAL PREMIUM ITEMS — TBD]"],
-    heroImage: { label: "Trimbak Kit — full hamper" },
+      "Everything in Sangam, plus more, in elevated packaging worth gifting.",
+    whatsInside: [...sharedItems, "[ADDITIONAL PREMIUM ITEMS: TBD]"],
+    heroImage: { label: "Trimbak Kit: full hamper" },
     productShots: sharedProductShots,
   },
 ];
@@ -87,7 +87,7 @@ export const elements: KumbhElement[] = [
     name: "Godavari Jal",
     location: "Godavari Ghats, Nashik",
     description:
-      "Holy water drawn directly from the Godavari at the Triveni Sangam — the exact confluence where Kumbh pilgrims take their sacred dip. Pour it, keep it, or pass on its blessing; this is Nashik's sanctity, sealed and delivered to your home.",
+      "Holy water drawn directly from the Godavari at the Triveni Sangam, the exact confluence where Kumbh pilgrims take their sacred dip. Pour it, keep it, or pass on its blessing; this is Nashik's sanctity, sealed and delivered to your home.",
     mediaType: "video",
     videoSrc: "/products/godavari-jal-video.mp4",
   },
@@ -103,7 +103,7 @@ export const elements: KumbhElement[] = [
     name: "Fridge Magnet",
     location: "Handcrafted Keepsake, Nashik",
     description:
-      "A laser-engraved wooden keepsake of Nashik's sacred skyline — Trimbakeshwar's shikhara and the Godavari ghats, carved to last. Stick it on your fridge and relive Kumbh every single day.",
+      "A laser-engraved wooden keepsake of Nashik's sacred skyline: Trimbakeshwar's shikhara and the Godavari ghats, carved to last. Stick it on your fridge and relive Kumbh every single day.",
     image: "/products/fridge-magnet.png",
     mediaType: "video",
     videoSrc: "/products/fridge-magnet-video.mp4",
@@ -112,7 +112,7 @@ export const elements: KumbhElement[] = [
     name: "Newspaper Tote Bag",
     location: "Printed in Nashik",
     description:
-      "Carried everywhere, remembered forever — this tote is printed like a pilgrim's passport, stamped with Kumbh 2027's sacred sites. Not just a bag — a story you'll tell for years.",
+      "Carried everywhere, remembered forever. This tote is printed like a pilgrim's passport, stamped with Kumbh 2027's sacred sites. Not just a bag, but a story you'll tell for years.",
     mediaType: "video",
     videoSrc: "/products/tote-bag-video.mp4",
   },

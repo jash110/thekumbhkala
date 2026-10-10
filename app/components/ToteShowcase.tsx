@@ -26,7 +26,7 @@ export default function ToteShowcase() {
               maxWidth: "64ch",
             }}
           >
-            Each hamper includes one tote bag design, chosen at random — Times
+            Each hamper includes one tote bag design, chosen at random: Times
             of Kumbh, Stamps of Kumbh, Notes of Kumbh, Passport of Kumbh, or
             Station of Kumbh. Explore all five below.
           </p>
