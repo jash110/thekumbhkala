@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FadeIn from "./FadeIn";
 import PlaceholderImage from "./PlaceholderImage";
+import KitImageToggle from "./KitImageToggle";
 import PriceTag from "./PriceTag";
 import ComingSoonBadge from "./ComingSoonBadge";
 import Bilingual from "./Bilingual";
@@ -46,11 +47,17 @@ export default function FeaturedKits() {
                 }}
               >
                 <div style={{ position: "relative" }}>
+                  {isTrimbak ? (
                   <PlaceholderImage
                     label={`[Photo: ${kit.name} packaging]`}
                     aspectRatio="4 / 3"
-                    tone={isTrimbak ? "maroon" : "cream"}
+                    tone="maroon"
                   />
+                ) : (
+                  <div style={{ position: "relative", aspectRatio: "4 / 3", borderRadius: "14px", overflow: "hidden" }}>
+                    <KitImageToggle sizes="(min-width: 860px) 45vw, 100vw" />
+                  </div>
+                )}
                   {kit.comingSoon && <ComingSoonBadge />}
                 </div>
                 <Bilingual

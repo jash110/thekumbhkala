@@ -1,8 +1,10 @@
 import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "../components/FadeIn";
 import BulkGiftingCard from "../components/BulkGiftingCard";
 import PlaceholderImage from "../components/PlaceholderImage";
+import KitImageToggle from "../components/KitImageToggle";
 import PriceTag from "../components/PriceTag";
 import ComingSoonBadge from "../components/ComingSoonBadge";
 import ToteShowcase from "../components/ToteShowcase";
@@ -21,10 +23,13 @@ export default function KitsPage() {
     <div>
       <FadeIn>
         <div style={{ position: "relative", width: "100%", height: "clamp(260px, 36vw, 520px)" }}>
-          <PlaceholderImage
-            label="[Photo: both hampers staged together on ghat steps]"
+          <Image
+            src="/products/sangam-kit-steps.png"
+            alt="Sangam Kit staged on the Godavari ghat steps"
             fill
-            rounded={false}
+            priority
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
           />
         </div>
       </FadeIn>
@@ -68,11 +73,17 @@ export default function KitsPage() {
                   }}
                 >
                   <div style={{ position: "relative" }}>
+                    {isTrimbak ? (
                     <PlaceholderImage
                       label={`[Photo: ${kit.name} packaging]`}
                       aspectRatio="4 / 3"
-                      tone={isTrimbak ? "maroon" : "cream"}
+                      tone="maroon"
                     />
+                  ) : (
+                    <div style={{ position: "relative", aspectRatio: "4 / 3", borderRadius: "14px", overflow: "hidden" }}>
+                      <KitImageToggle sizes="(min-width: 860px) 45vw, 100vw" />
+                    </div>
+                  )}
                     {kit.comingSoon && <ComingSoonBadge />}
                   </div>
                   <h2 style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}>

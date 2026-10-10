@@ -1,6 +1,7 @@
 import ComingSoonBadge from "./ComingSoonBadge";
 import Image from "next/image";
 import FadeIn from "./FadeIn";
+import KitImageToggle from "./KitImageToggle";
 import PlaceholderImage from "./PlaceholderImage";
 import ProductShowcase from "./ProductShowcase";
 import KitPurchasePanel from "./KitPurchasePanel";
@@ -35,11 +36,15 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
       <section className="kit-top-section">
         <div className="kit-top-image-col">
           <FadeIn className="kit-top-image-fade">
-            <PlaceholderImage
-              label={`[Photo: ${kit.name} - full hamper]`}
-              fill
-              rounded={false}
-            />
+            {isTrimbak ? (
+              <PlaceholderImage
+                label={`[Photo: ${kit.name} - full hamper]`}
+                fill
+                rounded={false}
+              />
+            ) : (
+              <KitImageToggle sizes="(min-width: 768px) 50vw, 100vw" priority />
+            )}
           </FadeIn>
           {kit.comingSoon && <ComingSoonBadge />}
           <p className="kit-top-caption">Box: [DIMENSIONS PLACEHOLDER]</p>
