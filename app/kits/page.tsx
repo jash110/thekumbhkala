@@ -22,7 +22,7 @@ export default function KitsPage() {
   return (
     <div>
       <FadeIn>
-        <div style={{ position: "relative", width: "100%", height: "clamp(260px, 36vw, 520px)" }}>
+        <div style={{ position: "relative", width: "100%", maxWidth: "1100px", margin: "0 auto", aspectRatio: "3 / 2" }}>
           <Image
             src="/products/sangam-kit-steps.png"
             alt="Sangam Kit staged on the Godavari ghat steps"

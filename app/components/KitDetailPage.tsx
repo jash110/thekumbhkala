@@ -1,7 +1,7 @@
 import ComingSoonBadge from "./ComingSoonBadge";
 import Image from "next/image";
 import FadeIn from "./FadeIn";
-import KitImageToggle from "./KitImageToggle";
+import KitImageToggle, { PORTRAIT_IMAGES } from "./KitImageToggle";
 import PlaceholderImage from "./PlaceholderImage";
 import ProductShowcase from "./ProductShowcase";
 import KitPurchasePanel from "./KitPurchasePanel";
@@ -43,7 +43,7 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
                 rounded={false}
               />
             ) : (
-              <KitImageToggle sizes="(min-width: 768px) 50vw, 100vw" priority />
+              <KitImageToggle sizes="(min-width: 768px) 50vw, 100vw" priority images={PORTRAIT_IMAGES} />
             )}
           </FadeIn>
           {kit.comingSoon && <ComingSoonBadge />}

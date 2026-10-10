@@ -3,25 +3,37 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const IMAGES = [
+export const LANDSCAPE_IMAGES = [
   { src: "/products/sangam-kit-closed.png", alt: "Sangam Kit, closed box" },
   { src: "/products/sangam-kit-inside.png", alt: "Sangam Kit, inside the box" },
+];
+export const PORTRAIT_IMAGES = [
+  { src: "/products/sangam-kit-closed-portrait.png", alt: "Sangam Kit, closed box" },
+  { src: "/products/sangam-kit-inside-portrait.png", alt: "Sangam Kit, inside the box" },
 ];
 const INTERVAL_MS = 3500;
 
 /** Fills its positioned parent, crossfading between the closed and open Sangam Kit photos. */
-export default function KitImageToggle({ sizes, priority = false }: { sizes: string; priority?: boolean }) {
+export default function KitImageToggle({
+  sizes,
+  priority = false,
+  images = LANDSCAPE_IMAGES,
+}: {
+  sizes: string;
+  priority?: boolean;
+  images?: { src: string; alt: string }[];
+}) {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = setInterval(() => setActive((i) => (i + 1) % IMAGES.length), INTERVAL_MS);
+    const id = setInterval(() => setActive((i) => (i + 1) % images.length), INTERVAL_MS);
     return () => clearInterval(id);
-  }, []);
+  }, [images.length]);
 
   return (
     <>
-      {IMAGES.map((img, i) => (
+      {images.map((img, i) => (
         <Image
           key={img.src}
           src={img.src}
