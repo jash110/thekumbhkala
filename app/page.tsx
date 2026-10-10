@@ -7,7 +7,6 @@ import FeaturedKits from "./components/FeaturedKits";
 import WhyPreBooking from "./components/WhyPreBooking";
 import ElementStoriesTeaser from "./components/ElementStoriesTeaser";
 import StoryTeaser from "./components/StoryTeaser";
-import InstagramPopup from "./components/InstagramPopup";
 import InstagramBanner from "./components/InstagramBanner";
 import ClosingCTA from "./components/ClosingCTA";
 
@@ -31,7 +30,6 @@ export default function Home() {
       <StoryTeaser />
       <InstagramBanner />
       <ClosingCTA />
-      <InstagramPopup />
     </div>
   );
 }

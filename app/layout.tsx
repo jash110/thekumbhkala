@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { NavBrandProvider } from "./components/NavBrandVisibility";
 import { CartProvider } from "./components/CartContext";
 import { SITE_URL, pageMetadata } from "./lib/seo";
+import InstagramPopup from "./components/InstagramPopup";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -57,6 +58,7 @@ export default function RootLayout({
             <Nav />
             {children}
             <Footer />
+            <InstagramPopup />
           </CartProvider>
         </NavBrandProvider>
       </body>

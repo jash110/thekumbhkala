@@ -1,41 +1,79 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { INSTAGRAM_URL } from "../lib/config";
 
-const STORAGE_KEY = "kumbhkala-ig-popup-shown";
-const DELAY_MS = 9000;
+const STORAGE_KEY = "kumbhkala-ig-popup";
+const FIRST_DELAY_MS = 9000;
+const COOLDOWN_MS = 90000;
+const MAX_APPEARANCES = 3;
+
+interface PopupState {
+  count: number; // times shown this session
+  done: boolean; // clicked through to Instagram, or hit the cap
+  nextAt: number; // epoch ms when the next appearance is due
+}
+
+function readState(): PopupState | null {
+  try {
+    const raw = sessionStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw) as PopupState;
+    const fresh = { count: 0, done: false, nextAt: Date.now() + FIRST_DELAY_MS };
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(fresh));
+    return fresh;
+  } catch {
+    return null; // storage blocked: never show, rather than risk an endless loop
+  }
+}
+
+function writeState(state: PopupState) {
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch {}
+}
 
 export default function InstagramPopup() {
   const [open, setOpen] = useState(false);
+  // bumped after each dismissal so the scheduling effect re-runs
+  const [tick, setTick] = useState(0);
 
   useEffect(() => {
-    try {
-      if (sessionStorage.getItem(STORAGE_KEY)) return;
-    } catch {
-      return; // storage blocked: skip rather than risk re-showing on every page
-    }
+    if (open) return;
+    const state = readState();
+    if (!state || state.done || state.count >= MAX_APPEARANCES) return;
     const timer = setTimeout(() => {
-      try {
-        sessionStorage.setItem(STORAGE_KEY, "1");
-      } catch {}
+      // reserve the next slot now, so a reload while open doesn't skip the cooldown
+      writeState({ ...state, count: state.count + 1, nextAt: Date.now() + COOLDOWN_MS });
       setOpen(true);
-    }, DELAY_MS);
+    }, Math.max(0, state.nextAt - Date.now()));
     return () => clearTimeout(timer);
+  }, [open, tick]);
+
+  const dismiss = useCallback((clickedThrough = false) => {
+    const state = readState();
+    if (state) {
+      writeState({
+        ...state,
+        done: clickedThrough || state.count >= MAX_APPEARANCES,
+        nextAt: Date.now() + COOLDOWN_MS,
+      });
+    }
+    setOpen(false);
+    setTick((t) => t + 1);
   }, []);
 
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && dismiss();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+  }, [open, dismiss]);
 
   if (!open) return null;
 
   return (
     <div className="ig-popup" role="dialog" aria-label="Follow us on Instagram">
-      <button type="button" className="ig-popup-close" onClick={() => setOpen(false)} aria-label="Close">
+      <button type="button" className="ig-popup-close" onClick={() => dismiss()} aria-label="Close">
         ×
       </button>
       <h2 className="ig-popup-title">Follow us on Instagram</h2>
@@ -48,7 +86,7 @@ export default function InstagramPopup() {
         target="_blank"
         rel="noopener noreferrer"
         className="btn btn-marigold"
-        onClick={() => setOpen(false)}
+        onClick={() => dismiss(true)}
       >
         Follow on Instagram
       </a>
