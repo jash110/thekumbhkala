@@ -133,7 +133,7 @@ export default function Nav() {
         >
           <motion.img
             layoutId={isHome ? undefined : "kumbhkala-logo-mark"}
-            src="/logo.png"
+            src="/logo.jpg"
             alt=""
             transition={{
               layout: settled

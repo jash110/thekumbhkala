@@ -25,7 +25,7 @@ export default function HeroLockup() {
     <div ref={ref} className="hero-lockup">
       <motion.img
         layoutId="kumbhkala-logo-mark"
-        src="/logo.png"
+        src="/logo.jpg"
         alt="Kumbhkala"
         transition={{ layout: { duration: 1.1, ease: [0.65, 0, 0.35, 1] } }}
         className="hero-lockup-mark"
