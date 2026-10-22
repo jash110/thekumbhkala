@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   description:
     "The Amrit Hamper is a Kumbh Mela souvenir hamper with everything in Sangam (Godavari Jal, Kalawa thread, Nashik's famous chivda, magnet, diya, tote) plus more, in gift-worthy packaging.",
   path: "/kits/trimbak",
-  image: "/products/tote-bags-showcase.png",
+  image: "/products/sangam-kit-closed.png",
 });
 
 export default function TrimbakKitPage() {

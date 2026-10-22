@@ -70,7 +70,7 @@ export default function ProductShowcase({ shots }: { shots: ProductShot[] }) {
                 {shot.src ? (
                   <Image
                     src={shot.src}
-                    alt={shot.label}
+                    alt={`${shot.label} from the Kumbhkala Kumbh gifting hamper`}
                     width={shot.width ?? 400}
                     height={shot.height ?? 400}
                   />

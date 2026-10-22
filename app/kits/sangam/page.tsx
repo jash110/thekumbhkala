@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   description:
     "The Sangam Kit is a Kumbh Mela souvenir kit with Godavari Jal, Kalawa thread, Nashik's famous chivda, black raisins, fridge magnet, diya, leaflet and a tote bag.",
   path: "/kits/sangam",
-  image: "/products/tote-bags-showcase.png",
+  image: "/products/sangam-kit-closed.png",
 });
 
 export default function SangamKitPage() {
