@@ -89,13 +89,13 @@ export default function KitsPage() {
                     as="h2"
                     en={kit.name.replace("Kit", "Hamper")}
                     hi={isTrimbak ? "अमृत हैम्पर" : "संगम हैम्पर"}
-                    hiColor={isTrimbak ? "var(--color-pink-soft)" : "var(--color-pink)"}
+                    hiColor={isTrimbak ? "var(--color-cream)" : "var(--color-pink)"}
                     style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}
                   />
                   <div style={{ marginBottom: "0.75rem" }}>
                     <PriceTag mrp={kit.mrp} price={kit.price} comingSoon={kit.comingSoon} size="lg" accent={isTrimbak ? "cream" : "marigold"} />
                   </div>
-                  <p style={{ fontSize: "clamp(1.05rem, 1.2vw, 1.15rem)", lineHeight: 1.6, color: isTrimbak ? "rgba(240,232,220,0.75)" : "var(--color-muted)" }}>
+                  <p style={{ fontSize: "clamp(1.05rem, 1.2vw, 1.15rem)", lineHeight: 1.6, color: isTrimbak ? "var(--color-cream)" : "var(--color-muted)" }}>
                     {kit.description}
                   </p>
 

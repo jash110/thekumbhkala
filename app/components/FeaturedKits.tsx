@@ -64,13 +64,13 @@ export default function FeaturedKits() {
                   as="h3"
                   en={kit.name.replace("Kit", "Hamper")}
                   hi={KIT_HINDI_NAMES[kit.slug]}
-                  hiColor={isTrimbak ? "var(--color-pink-soft)" : "var(--color-pink)"}
+                  hiColor={isTrimbak ? "var(--color-cream)" : "var(--color-pink)"}
                   style={{ margin: "1.25rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}
                 />
                 <div style={{ marginBottom: "0.75rem" }}>
                   <PriceTag mrp={kit.mrp} price={kit.price} comingSoon={kit.comingSoon} accent={isTrimbak ? "cream" : "marigold"} />
                 </div>
-                <p style={{ fontSize: "0.95rem", lineHeight: 1.6, color: isTrimbak ? "rgba(240,232,220,0.75)" : "var(--color-muted)", marginBottom: "1.25rem" }}>
+                <p style={{ fontSize: "0.95rem", lineHeight: 1.6, color: isTrimbak ? "var(--color-cream)" : "var(--color-muted)", marginBottom: "1.25rem" }}>
                   {kit.description}
                 </p>
                 {!isTrimbak && (
