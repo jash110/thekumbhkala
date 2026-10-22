@@ -16,7 +16,7 @@ export default function BulkGiftingCard() {
     >
       <h2 style={{ fontSize: "clamp(1.4rem, 2vw, 1.7rem)", marginBottom: "0.6rem" }}>Corporate &amp; Bulk Gifting</h2>
       <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "var(--color-muted)", marginBottom: "1.25rem", maxWidth: "62ch" }}>
-        Ordering 15+ hampers for your company or event? We can add your company&apos;s logo to the packaging using
+        Looking for Kumbh gifting hampers for your company or event (15+)? We can add your company&apos;s logo to the packaging using
         custom sleeves. If you&apos;d like to provide your own branding elements, we&apos;re happy to explore
         integrating them too.
       </p>

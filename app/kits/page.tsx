@@ -11,9 +11,9 @@ import Bilingual from "../components/Bilingual";
 import { kits } from "../lib/data";
 
 export const metadata = pageMetadata({
-  title: "Shop Kumbh Mela Souvenir Kits: Sangam Kit & Amrit Hamper | Kumbhkala",
+  title: "Kumbh Gifting Hampers 2027: Sangam Kit & Amrit Hamper | Kumbhkala",
   description:
-    "Order Kumbhkala's Kumbh Mela 2027 souvenir kits from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Amrit Hamper, elevated for gifting.",
+    "Order Kumbhkala's Kumbh gifting hampers for Kumbh Mela 2027 from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Amrit Hamper, elevated for gifting.",
   path: "/kits",
 });
 
@@ -95,6 +95,7 @@ export default function KitsPage() {
                     {kit.description}
                   </p>
 
+                  {!isTrimbak && (
                   <div
                     style={{
                       marginTop: "1.25rem",
@@ -141,6 +142,7 @@ export default function KitsPage() {
                       })}
                     </ul>
                   </div>
+                  )}
 
                   <Link href={`/kits/${kit.slug}`} className={isTrimbak ? "btn btn-marigold" : "btn btn-outline"}>
                     View Hamper

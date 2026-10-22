@@ -10,9 +10,9 @@ import InstagramBanner from "./components/InstagramBanner";
 import ClosingCTA from "./components/ClosingCTA";
 
 export const metadata = pageMetadata({
-  title: "Kumbhkala | Kumbh Mela 2027 Souvenir & Ritual Kits from Nashik",
+  title: "Kumbhkala | Kumbh Mela 2027 Gifting Hampers: Sangam & Amrit",
   description:
-    "Kumbhkala brings you authentic Kumbh Mela souvenir and ritual kits for Nashik Simhastha Kumbh 2027: Godavari Jal, Trimbakeshwar kalawa, handcrafted keepsakes and more.",
+    "Kumbhkala brings you authentic Kumbh Mela souvenir and ritual kits and Kumbh gifting hampers for Nashik Simhastha Kumbh 2027: Godavari Jal, Trimbakeshwar kalawa, handcrafted keepsakes and more.",
   path: "/",
 });
 
