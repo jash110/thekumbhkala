@@ -40,7 +40,6 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
             )}
           </FadeIn>
           {kit.comingSoon && <ComingSoonBadge />}
-          <p className="kit-top-caption">Box: [DIMENSIONS PLACEHOLDER]</p>
         </div>
 
         <div className="kit-top-text-col">
