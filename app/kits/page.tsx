@@ -85,9 +85,13 @@ export default function KitsPage() {
                   )}
                     {kit.comingSoon && <ComingSoonBadge />}
                   </div>
-                  <h2 style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}>
-                    {isTrimbak ? "अमृत हैम्पर" : kit.name.replace("Kit", "Hamper")}
-                  </h2>
+                  <Bilingual
+                    as="h2"
+                    en={kit.name.replace("Kit", "Hamper")}
+                    hi={isTrimbak ? "अमृत हैम्पर" : "संगम हैम्पर"}
+                    hiColor={isTrimbak ? "var(--color-pink-soft)" : "var(--color-pink)"}
+                    style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}
+                  />
                   <div style={{ marginBottom: "0.75rem" }}>
                     <PriceTag mrp={kit.mrp} price={kit.price} comingSoon={kit.comingSoon} size="lg" accent={isTrimbak ? "cream" : "marigold"} />
                   </div>
