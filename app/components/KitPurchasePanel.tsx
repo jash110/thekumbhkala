@@ -43,7 +43,7 @@ export default function KitPurchasePanel({ kit }: { kit: Kit }) {
                 openDrawer();
               }}
             >
-              Pre-Order {kit.name}
+              Click to Order {kit.name}
             </button>
           </>
         )}

@@ -23,14 +23,7 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
   if (!kit) notFound();
 
   const isTrimbak = slug === "trimbak";
-  const kitHindiName = isTrimbak ? "त्र्यंबक किट" : "संगम किट";
-  const displayElements = isTrimbak
-    ? [
-        ...elements,
-        { name: "[Additional premium element: TBD]", location: "TBD", description: "A premium ritual element exclusive to the Trimbak Kit, to be finalized before launch." },
-      ]
-    : elements;
-
+  const kitHindiName = isTrimbak ? "अमृत हैम्पर" : "संगम किट";
   return (
     <div className="kit-page">
       <section className="kit-top-section">
@@ -52,7 +45,7 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
 
         <div className="kit-top-text-col">
           <FadeIn delay={0.15}>
-            <span className="label">{isTrimbak ? "Premium Kit" : "Starter Kit"}</span>
+            <span className="label">{isTrimbak ? "Premium Hamper" : "Starter Kit"}</span>
             <Bilingual
               as="h1"
               en={kit.name}
@@ -61,6 +54,7 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
             />
             <KitPurchasePanel kit={kit} />
 
+            {!isTrimbak && (
             <div style={{ marginTop: "1.5rem", paddingTop: "1.5rem", borderTop: "1px solid var(--color-border)" }}>
               <Bilingual as="label" en="What's Inside" hi="अंदर क्या है" style={{ display: "block", marginBottom: "1rem" }} />
               <ul className="whats-inside-list">
@@ -115,13 +109,18 @@ export default function KitDetailPage({ slug }: { slug: "sangam" | "trimbak" }) 
                 })}
               </ul>
             </div>
+            )}
           </FadeIn>
         </div>
       </section>
 
-      <ProductShowcase shots={kit.productShots} />
+      {!isTrimbak && (
+        <>
+          <ProductShowcase shots={kit.productShots} />
 
-      <ElementGrid elements={displayElements} />
+          <ElementGrid elements={elements} />
+        </>
+      )}
 
       <style>{`
         .kit-page {

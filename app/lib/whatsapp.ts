@@ -43,7 +43,7 @@ export function buildOrderMessage(params: {
   });
 
   return [
-    "Namaste! I'd like to place a pre-order with Kumbhkala.",
+    "Namaste! I'd like to place an order with Kumbhkala.",
     "",
     "*Order Details:*",
     ...lines,

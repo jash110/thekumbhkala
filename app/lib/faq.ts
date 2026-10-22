@@ -5,11 +5,11 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do I place an order?",
-    a: "Right now, orders are taken as pre-bookings via WhatsApp. Tap \"Pre-Order\" on any kit or the WhatsApp button on this site, and our team will confirm your order and next steps directly with you.",
+    a: "Right now, orders are taken via WhatsApp. Tap \"Click to Order\" on any kit or the WhatsApp button on this site, and our team will confirm your order and next steps directly with you.",
   },
   {
-    q: "What's the difference between the Sangam Kit and the Trimbak Kit?",
-    a: "The Sangam Kit is our starter set with the essentials. The Trimbak Kit includes everything in the Sangam Kit plus additional premium items, packaged for gifting.",
+    q: "What's the difference between the Sangam Kit and the Amrit Hamper?",
+    a: "The Sangam Kit is our starter set with the essentials. The Amrit Hamper includes everything in the Sangam Kit plus additional premium items, packaged for gifting.",
   },
   {
     q: "Are the items really sourced from Nashik?",

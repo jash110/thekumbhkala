@@ -20,8 +20,8 @@ export interface Kit {
 }
 
 const sharedItems = [
-  "Kondaji Chivda (100g)",
-  "Raisins & Dry Fruit (100g)",
+  "Nashik's famous chivda (100g)",
+  "Black Raisins (100g)",
   "Fridge Magnet",
   "Leaflet",
   "Tote Bag (1 of 5 designs)",
@@ -33,8 +33,8 @@ const sharedItems = [
 const sharedProductShots: ProductShot[] = [
   { label: "Fridge Magnet", src: "/products/fridge-magnet.png", width: 1672, height: 941 },
   { label: "Godavari Jal (200ml)", src: "/products/godavari-jal.png", width: 941, height: 1672 },
-  { label: "Kondaji Chivda (100g)", src: "/products/kondaji-chivda.png", width: 941, height: 1672 },
-  { label: "Raisins & Dry Fruit (100g)", src: "/products/raisins.png", width: 1312, height: 1199 },
+  { label: "Nashik's famous chivda (100g)", src: "/products/kondaji-chivda.png", width: 941, height: 1672 },
+  { label: "Black Raisins (100g)", src: "/products/black_raisins.png", width: 1312, height: 1199 },
   { label: "Diya", src: "/products/diya.png", width: 1448, height: 1086 },
   { label: "Leaflet", src: "/products/leaflet.png", width: 1536, height: 1024 },
   { label: "Tote Bag", src: "/products/tote-bags-showcase.png", width: 1672, height: 941 },
@@ -56,7 +56,7 @@ export const kits: Kit[] = [
   },
   {
     slug: "trimbak",
-    name: "Trimbak Kit",
+    name: "Amrit Hamper",
     tagline: "Everything in Sangam, elevated for gifting.",
     mrp: 0, // no price yet — see comingSoon
     price: 0,
@@ -64,7 +64,7 @@ export const kits: Kit[] = [
     description:
       "Everything in Sangam, plus more, in elevated packaging worth gifting.",
     whatsInside: [...sharedItems, "[ADDITIONAL PREMIUM ITEMS: TBD]"],
-    heroImage: { label: "Trimbak Kit: full hamper" },
+    heroImage: { label: "Amrit Hamper: full hamper" },
     productShots: sharedProductShots,
   },
 ];

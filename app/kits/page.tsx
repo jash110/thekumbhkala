@@ -7,14 +7,13 @@ import PlaceholderImage from "../components/PlaceholderImage";
 import KitImageToggle from "../components/KitImageToggle";
 import PriceTag from "../components/PriceTag";
 import ComingSoonBadge from "../components/ComingSoonBadge";
-import ToteShowcase from "../components/ToteShowcase";
 import Bilingual from "../components/Bilingual";
 import { kits } from "../lib/data";
 
 export const metadata = pageMetadata({
-  title: "Shop Kumbh Mela Souvenir Kits: Sangam & Trimbak Kits | Kumbhkala",
+  title: "Shop Kumbh Mela Souvenir Kits: Sangam Kit & Amrit Hamper | Kumbhkala",
   description:
-    "Pre-book Kumbhkala's Kumbh Mela 2027 souvenir kits from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Trimbak Kit, elevated for gifting.",
+    "Order Kumbhkala's Kumbh Mela 2027 souvenir kits from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Amrit Hamper, elevated for gifting.",
   path: "/kits",
 });
 
@@ -152,8 +151,6 @@ export default function KitsPage() {
           })}
         </div>
       </div>
-
-      <ToteShowcase />
 
       <div style={{ padding: "0 var(--page-gutter) clamp(48px, 6vw, 80px)" }}>
         <BulkGiftingCard />

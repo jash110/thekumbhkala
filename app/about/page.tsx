@@ -2,7 +2,7 @@ import { pageMetadata } from "../lib/seo";
 import FadeIn from "../components/FadeIn";
 import HomeImageSlot from "../components/HomeImageSlot";
 import Bilingual from "../components/Bilingual";
-import { SHLOKA_LINE_1, SHLOKA_LINE_2, SHLOKA_CITATION, ABOUT_SUBHEADING, ABOUT_PARAGRAPHS } from "../lib/copy";
+import { SHLOKA_LINE_1, SHLOKA_LINE_2, SHLOKA_CITATION, SHLOKA_MEANING_EN, ABOUT_SUBHEADING, ABOUT_PARAGRAPHS } from "../lib/copy";
 
 export const metadata = pageMetadata({
   title: "Our Story: Why We Created Kumbhkala | Kumbh Mela 2027, Nashik",
@@ -43,6 +43,10 @@ export default function AboutPage() {
                 <br />
                 {SHLOKA_LINE_2}
               </p>
+              {/* TODO: English meaning pending confirmed translation; set SHLOKA_MEANING_EN in app/lib/copy.ts */}
+              {SHLOKA_MEANING_EN && (
+                <p style={{ fontSize: "1.1rem", lineHeight: 1.7, marginTop: "0.75rem" }}>{SHLOKA_MEANING_EN}</p>
+              )}
               <p style={{ fontStyle: "italic", fontSize: "1rem", color: "var(--color-muted)", marginTop: "0.75rem" }}>
                 {SHLOKA_CITATION}
               </p>

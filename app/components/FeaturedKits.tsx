@@ -8,8 +8,8 @@ import Bilingual from "./Bilingual";
 import { kits } from "../lib/data";
 
 const KIT_HINDI_NAMES: Record<string, string> = {
-  sangam: "संगम किट",
-  trimbak: "त्र्यंबक किट",
+  sangam: "संगम हैम्पर",
+  trimbak: "अमृत हैम्पर",
 };
 
 export default function FeaturedKits() {
@@ -17,7 +17,7 @@ export default function FeaturedKits() {
     <section className="section" style={{ maxWidth: "1200px", margin: "0 auto" }}>
       <div style={{ textAlign: "center", marginBottom: "3rem" }}>
         <FadeIn>
-          <Bilingual as="label" en="Our Kits" hi="हमारे किट" />
+          <Bilingual as="label" en="Our Hampers" hi="हमारे हैम्पर" />
         </FadeIn>
         <FadeIn delay={0.1}>
           <Bilingual
@@ -62,7 +62,7 @@ export default function FeaturedKits() {
                 </div>
                 <Bilingual
                   as="h3"
-                  en={kit.name}
+                  en={kit.name.replace("Kit", "Hamper")}
                   hi={KIT_HINDI_NAMES[kit.slug]}
                   hiColor={isTrimbak ? "var(--color-pink-soft)" : "var(--color-pink)"}
                   style={{ margin: "1.25rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}
@@ -77,7 +77,7 @@ export default function FeaturedKits() {
                   href={`/kits/${kit.slug}`}
                   className={isTrimbak ? "btn btn-marigold" : "btn btn-outline"}
                 >
-                  View Kit
+                  View Hamper
                 </Link>
               </div>
             </FadeIn>

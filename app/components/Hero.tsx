@@ -50,7 +50,7 @@ export default function Hero() {
             borderRadius: "999px",
           }}
         >
-          Pre-Bookings Open
+          Orders Open
         </span>
         <span className="label" style={{ display: "block" }}>
           Nashik · Simhastha 2027
@@ -78,7 +78,7 @@ export default function Hero() {
       <FadeIn delay={0.45}>
         <div style={{ display: "flex", alignItems: "center", gap: "1.75rem", flexWrap: "wrap" }}>
           <Link href="/kits" className="btn btn-marigold">
-            Discover the Kits
+            Discover the Hampers
           </Link>
           <a
             href="#kumbh-context"

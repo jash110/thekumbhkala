@@ -7,7 +7,7 @@ import Bilingual from "../components/Bilingual";
 export const metadata = pageMetadata({
   title: "Contact Kumbhkala: Orders & Enquiries for Kumbh Mela 2027 Kits",
   description:
-    "Get in touch with Kumbhkala to pre-book a Sangam or Trimbak Kit, ask about Kumbh Mela 2027 souvenirs, or enquire about gifting. Reach us on WhatsApp or via the form.",
+    "Get in touch with Kumbhkala to order a Sangam Kit or Amrit Hamper, ask about Kumbh Mela 2027 souvenirs, or enquire about gifting. Reach us on WhatsApp or via the form.",
   path: "/contact",
 });
 

@@ -20,6 +20,18 @@ const supportLinks = [
   },
 ];
 
+const iconStyle: React.CSSProperties = {
+  width: "34px",
+  height: "34px",
+  borderRadius: "50%",
+  border: "1px solid rgba(240,232,220,0.3)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "0.72rem",
+  color: "rgba(240,232,220,0.7)",
+};
+
 export default function Footer() {
   return (
     <footer
@@ -90,27 +102,6 @@ export default function Footer() {
           </span>
           <NewsletterSignup />
 
-          <div style={{ display: "flex", gap: "0.75rem", marginTop: "1.5rem" }}>
-            <a
-              href="https://www.instagram.com/thekumbhkala?stkn=MWFwNW5wazdmYXdjMw=="
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Kumbhkala on Instagram"
-              style={{
-                width: "34px",
-                height: "34px",
-                borderRadius: "50%",
-                border: "1px solid rgba(240,232,220,0.3)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "0.72rem",
-                color: "rgba(240,232,220,0.7)",
-              }}
-            >
-              IG
-            </a>
-          </div>
         </div>
       </div>
 
@@ -124,6 +115,27 @@ export default function Footer() {
         }}
       >
         © 2026 Kumbhkala.
+      </div>
+
+      <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", marginTop: "2rem" }}>
+        <a
+          href="https://www.instagram.com/thekumbhkala?stkn=MWFwNW5wazdmYXdjMw=="
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Kumbhkala on Instagram"
+          style={iconStyle}
+        >
+          IG
+        </a>
+        <a
+          href={whatsappUrl("Hi Kumbhkala, I have a question.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with Kumbhkala on WhatsApp"
+          style={iconStyle}
+        >
+          WA
+        </a>
       </div>
 
       <style>{`

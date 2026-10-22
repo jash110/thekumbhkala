@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import KumbhContext from "./components/KumbhContext";
 import PrincipleSection from "./components/PrincipleSection";
 import FeaturedKits from "./components/FeaturedKits";
-import WhyPreBooking from "./components/WhyPreBooking";
 import ElementStoriesTeaser from "./components/ElementStoriesTeaser";
 import StoryTeaser from "./components/StoryTeaser";
 import InstagramBanner from "./components/InstagramBanner";
@@ -25,7 +24,6 @@ export default function Home() {
       <KumbhContext />
       <PrincipleSection />
       <FeaturedKits />
-      <WhyPreBooking />
       <ElementStoriesTeaser />
       <StoryTeaser />
       <InstagramBanner />
