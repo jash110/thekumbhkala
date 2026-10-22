@@ -43,9 +43,8 @@ export default function AboutPage() {
                 <br />
                 {SHLOKA_LINE_2}
               </p>
-              {/* TODO: English meaning pending confirmed translation; set SHLOKA_MEANING_EN in app/lib/copy.ts */}
               {SHLOKA_MEANING_EN && (
-                <p style={{ fontSize: "1.1rem", lineHeight: 1.7, marginTop: "0.75rem" }}>{SHLOKA_MEANING_EN}</p>
+                <p style={{ fontStyle: "italic", fontSize: "clamp(1rem, 1.3vw, 1.15rem)", lineHeight: 1.7, color: "var(--color-muted)", marginTop: "0.75rem" }}>{SHLOKA_MEANING_EN}</p>
               )}
               <p style={{ fontStyle: "italic", fontSize: "1rem", color: "var(--color-muted)", marginTop: "0.75rem" }}>
                 {SHLOKA_CITATION}

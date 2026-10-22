@@ -24,7 +24,7 @@ export default function KitsPage() {
         <div style={{ position: "relative", width: "100%", maxWidth: "1100px", margin: "0 auto", aspectRatio: "3 / 2" }}>
           <Image
             src="/products/sangam-kit-steps.png"
-            alt="Sangam Kit staged on the Godavari ghat steps"
+            alt="Sangam Hamper staged on the Godavari ghat steps"
             fill
             priority
             sizes="100vw"
@@ -86,7 +86,7 @@ export default function KitsPage() {
                     {kit.comingSoon && <ComingSoonBadge />}
                   </div>
                   <h2 style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}>
-                    {kit.name}
+                    {kit.name.replace("Kit", "Hamper")}
                   </h2>
                   <div style={{ marginBottom: "0.75rem" }}>
                     <PriceTag mrp={kit.mrp} price={kit.price} comingSoon={kit.comingSoon} size="lg" accent={isTrimbak ? "cream" : "marigold"} />
@@ -143,7 +143,7 @@ export default function KitsPage() {
                   </div>
 
                   <Link href={`/kits/${kit.slug}`} className={isTrimbak ? "btn btn-marigold" : "btn btn-outline"}>
-                    View Kit
+                    View Hamper
                   </Link>
                 </div>
               </FadeIn>

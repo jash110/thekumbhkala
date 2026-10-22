@@ -3,8 +3,9 @@ export const PRINCIPLE_TEXT =
 
 export const SHLOKA_LINE_1 = "य इदं परमं गुह्यं मद्भक्तेष्वभिधास्यति।";
 export const SHLOKA_LINE_2 = "भक्तिं मयि परां कृत्वा मामेवैष्यत्यसंशयः॥";
-// TODO: English meaning of the shloka — awaiting confirmed wording from owner. Leave empty to hide.
-export const SHLOKA_MEANING_EN = "";
+// English meaning of the shloka. Leave empty to hide.
+export const SHLOKA_MEANING_EN =
+  "He who teaches this supreme secret to My devotees, performing the highest act of devotion to Me, shall come to Me alone — without doubt.";
 export const SHLOKA_CITATION = "Bhagavad Gita | Chapter 18, Verse 68";
 export const ABOUT_SUBHEADING = "A journey back to our roots.";
 
