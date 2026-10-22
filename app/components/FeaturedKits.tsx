@@ -60,6 +60,9 @@ export default function FeaturedKits() {
                 )}
                   {kit.comingSoon && <ComingSoonBadge />}
                 </div>
+                {isTrimbak ? (
+                  <h3 style={{ margin: "1.25rem 0 0.5rem", color: "var(--color-cream)" }}>{KIT_HINDI_NAMES[kit.slug]}</h3>
+                ) : (
                 <Bilingual
                   as="h3"
                   en={kit.name.replace("Kit", "Hamper")}
@@ -67,18 +70,18 @@ export default function FeaturedKits() {
                   hiColor={isTrimbak ? "var(--color-pink-soft)" : "var(--color-pink)"}
                   style={{ margin: "1.25rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}
                 />
+                )}
                 <div style={{ marginBottom: "0.75rem" }}>
                   <PriceTag mrp={kit.mrp} price={kit.price} comingSoon={kit.comingSoon} accent={isTrimbak ? "cream" : "marigold"} />
                 </div>
                 <p style={{ fontSize: "0.95rem", lineHeight: 1.6, color: isTrimbak ? "rgba(240,232,220,0.75)" : "var(--color-muted)", marginBottom: "1.25rem" }}>
                   {kit.description}
                 </p>
-                <Link
-                  href={`/kits/${kit.slug}`}
-                  className={isTrimbak ? "btn btn-marigold" : "btn btn-outline"}
-                >
-                  View Hamper
-                </Link>
+                {!isTrimbak && (
+                  <Link href={`/kits/${kit.slug}`} className="btn btn-outline">
+                    View Hamper
+                  </Link>
+                )}
               </div>
             </FadeIn>
           );

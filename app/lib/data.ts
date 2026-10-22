@@ -24,7 +24,7 @@ const sharedItems = [
   "Black Raisins (100g)",
   "Fridge Magnet",
   "Leaflet",
-  "Tote Bag (1 of 5 designs)",
+  "Tote Bag",
   "Diya",
   "Kalawa Thread",
   "Godavari Jal (200ml)",
@@ -37,7 +37,7 @@ const sharedProductShots: ProductShot[] = [
   { label: "Black Raisins (100g)", src: "/products/black_raisins.png", width: 1254, height: 1254 },
   { label: "Diya", src: "/products/diya.png", width: 1448, height: 1086 },
   { label: "Leaflet", src: "/products/leaflet.png", width: 1536, height: 1024 },
-  { label: "Tote Bag", src: "/products/tote-bags-showcase.png", width: 1672, height: 941 },
+  { label: "Tote Bag", src: "/products/tote-bag-passport.png", width: 941, height: 1672 },
   { label: "Kalawa Thread", src: "/products/Kalawa.png", width: 1441, height: 1092 },
 ];
 
@@ -57,12 +57,12 @@ export const kits: Kit[] = [
   {
     slug: "trimbak",
     name: "Amrit Hamper",
-    tagline: "Everything in Sangam, elevated for gifting.",
+    tagline: "Crafted with care, unveiling soon.",
     mrp: 0, // no price yet — see comingSoon
     price: 0,
     comingSoon: true,
     description:
-      "Everything in Sangam, plus more, in elevated packaging worth gifting.",
+      "Crafted with care, unveiling soon.",
     whatsInside: [...sharedItems, "[ADDITIONAL PREMIUM ITEMS: TBD]"],
     heroImage: { label: "Amrit Hamper: full hamper" },
     productShots: sharedProductShots,

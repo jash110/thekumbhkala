@@ -50,7 +50,7 @@ export default function Hero() {
             borderRadius: "999px",
           }}
         >
-          Orders Open
+          Accepting Orders
         </span>
         <span className="label" style={{ display: "block" }}>
           Nashik · Simhastha 2027

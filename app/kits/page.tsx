@@ -13,7 +13,7 @@ import { kits } from "../lib/data";
 export const metadata = pageMetadata({
   title: "Kumbh Gifting Hampers 2027: Sangam Kit & Amrit Hamper | Kumbhkala",
   description:
-    "Order Kumbhkala's Kumbh gifting hampers for Kumbh Mela 2027 from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Amrit Hamper, elevated for gifting.",
+    "Order Kumbhkala's Kumbh gifting hampers for Kumbh Mela 2027 from Nashik: the Sangam Kit, a starter set of ritual and remembrance, and the Amrit Hamper, crafted with care and unveiling soon.",
   path: "/kits",
 });
 
@@ -86,7 +86,7 @@ export default function KitsPage() {
                     {kit.comingSoon && <ComingSoonBadge />}
                   </div>
                   <h2 style={{ fontSize: "clamp(1.8rem, 2.4vw, 2.2rem)", margin: "1.5rem 0 0.5rem", color: isTrimbak ? "var(--color-cream)" : "var(--color-ink)" }}>
-                    {kit.name.replace("Kit", "Hamper")}
+                    {isTrimbak ? "अमृत हैम्पर" : kit.name.replace("Kit", "Hamper")}
                   </h2>
                   <div style={{ marginBottom: "0.75rem" }}>
                     <PriceTag mrp={kit.mrp} price={kit.price} comingSoon={kit.comingSoon} size="lg" accent={isTrimbak ? "cream" : "marigold"} />
@@ -144,9 +144,11 @@ export default function KitsPage() {
                   </div>
                   )}
 
-                  <Link href={`/kits/${kit.slug}`} className={isTrimbak ? "btn btn-marigold" : "btn btn-outline"}>
-                    View Hamper
-                  </Link>
+                  {!isTrimbak && (
+                    <Link href={`/kits/${kit.slug}`} className="btn btn-outline">
+                      View Hamper
+                    </Link>
+                  )}
                 </div>
               </FadeIn>
             );

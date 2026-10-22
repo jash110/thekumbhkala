@@ -9,7 +9,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What's the difference between the Sangam Kit and the Amrit Hamper?",
-    a: "The Sangam Kit is our starter set with the essentials. The Amrit Hamper includes everything in the Sangam Kit plus additional premium items, packaged for gifting.",
+    a: "The Sangam Kit is our starter set with the essentials. The Amrit Hamper is our upcoming gifting hamper. Crafted with care, unveiling soon.",
   },
   {
     q: "Are the items really sourced from Nashik?",
